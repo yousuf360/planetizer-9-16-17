@@ -1,0 +1,71 @@
+﻿@using fyp_One.Models
+@model UserLogInVM
+@using Microsoft.Owin.Security
+
+
+@*<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#btnGoogleLogin').click(function () {
+
+            window.location.href = "";
+
+        });
+
+    });
+
+</script>*@
+
+@{ 
+
+
+    //var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+
+
+    using (Html.BeginForm("ExternalLogin", "User"))
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="field-wrap">
+        <label>
+            Email Address<span class="req">*</span>
+        </label>
+        @Html.EditorFor(model => model.LogInEmail)
+        @Html.ValidationMessageFor(model => model.LogInEmail, "", new { @class = "text-danger" })
+
+
+    </div>
+
+    <div class="field-wrap">
+        <label>
+            Password<span class="req">*</span>
+        </label>
+        @Html.EditorFor(model => model.LogInPassword)  
+        @Html.ValidationMessageFor(model => model.LogInPassword, "", new { @class = "text-danger" })
+
+
+      </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <p class="forgot"><a href="#">Forgot Password?</a></p>
+    <input type="submit" class="button button-block" value="Login">
+
+    <input type="submit" class="button button-block" value="Login with Google">
+
+        @*foreach (AuthenticationDescription p in loginProviders)
+        {
+            <button type="submit" id="btnGoogleLogin @p.AuthenticationType" name="provider" class="button button-block" value="@p.AuthenticationType">Sign In with Google</button>
+            <input type="button" id="btnGoogleLogin @p.AuthenticationType" name="provider" class="button button-block" value="Login with google">
+        }*@
+
+
+
+
+    }
+
+    <section id="socialLoginForm">
+        @Html.Partial("../Account/_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+    </section>
+
+}

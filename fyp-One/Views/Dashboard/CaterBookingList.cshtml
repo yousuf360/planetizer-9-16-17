@@ -1,0 +1,133 @@
+﻿@model IEnumerable<fyp_One.Models.CaterOrder>
+
+@{
+    ViewBag.Title = "Booking-List";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+
+
+
+<h1>&nbsp;</h1>
+
+<div class="panel panel-default" style="padding:6px;">
+    <h2>Cater Menu Booking List</h2>
+    <h1>&nbsp;</h1>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactNo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EventDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Guests)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            Cater Service Name
+                        </th>
+                        <th>
+                            Menu Name
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                        <th>Action</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+            {
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactNo)
+                            </td>
+                            <td>
+                                @item.EventDate.ToShortDateString()
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Guests)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Menu.Cater.CaterServiceName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Menu.Mname)
+                            </td>
+
+                            <td>
+                                @if (item.Status.Equals("1"))
+                {
+                                    <button class="btn btn-warning" Cater-booking-id="@item.Id" style="color:#fff; margin:5px;">pending </button>
+
+                                }
+                                else if (item.Status.Equals("2"))
+                                {
+                                    <button class="btn btn-success" Cater-booking-id="@item.Id" style="color:#fff; margin:5px;">Approved</button>
+                                }
+                                else if (item.Status.Equals("3"))
+                                {
+                                    <button class="btn btn-danger" Cater-booking-id="@item.Id" style="color:#fff; margin:5px;">Regected</button>
+                                }
+
+                            </td>
+                            <td>
+                                @if (item.Status.Equals("1"))
+                {
+                                    <form method="post" action="@Url.Action("responseCater","dashboard")">
+                                        <input name="id" value="@item.Id" hidden />
+                                        <input name="action" value="3" hidden />
+                                        <input class="btn btn-danger reject-confirm" type="submit" Cater-booking-id="@item.Id" style="float:right; margin:5px;" value="Reject" />
+                                    </form>
+                                    <form method="post" action="@Url.Action("responseCater","dashboard")">
+                                        <input name="id" value="@item.Id" hidden />
+                                        <input name="action" value="2" hidden />
+                                        <input type="submit" class="btn btn-success verify-confirm" Cater-booking-id="@item.Id" style="float:right; margin:5px" value="Approve" />
+                                    </form>
+                                }
+                                else if (item.Status.Equals("2"))
+                                {
+                                    <form method="post" action="@Url.Action("responseCater","dashboard")">
+                                        <input name="id" value="@item.Id" hidden />
+                                        <input name="action" value="3" hidden />
+                                        <input class="btn btn-danger reject-confirm" type="submit" Cater-booking-id="@item.Id" style="float:right; margin:5px;" value="Reject" />
+                                    </form>
+                                }
+                                else if (item.Status.Equals("3"))
+                                {
+
+                                    <form method="post" action="@Url.Action("responseCater","dashboard")">
+                                        <input name="id" value="@item.Id" hidden />
+                                        <input name="action" value="2" hidden />
+                                        <input type="submit" class="btn btn-success verify-confirm" Cater-booking-id="@item.Id" style="float:right; margin:5px" value="Approve" />
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

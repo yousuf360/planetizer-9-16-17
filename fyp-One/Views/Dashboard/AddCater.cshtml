@@ -1,0 +1,165 @@
+﻿@model fyp_One.Models.AddCaterViewModel
+
+@{
+    ViewBag.Title = "Add Catering Service";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+@using (Html.BeginForm("AddCater", "Dashboard",
+                  FormMethod.Post, new { @id = "cfrm", encType = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+
+    <div class="container" id="photo-tab">    @* ---------   Cater Form div -------*@
+
+        <div class="col-md-8">
+            <h2><strong>Register Catering Service</strong></h2>
+            <p>
+                Register a new catering sarvice. <br />You're in control! We just need basic information to get you started.
+            </p>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <div class="form" id="cater-form">
+                <div id="add-cater-frm">
+                    <div class="form-div">
+
+                        <div class="form-group">
+                            <h3><strong>Basic Information</strong></h3><p>&nbsp;</p>
+                            <label for="tab1">Catering Service Name</label><br />
+                            @Html.EditorFor(model => model.CaterServiceName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CaterServiceName, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                        
+                            <label>Street Adress</label><br />
+                            @Html.EditorFor(model => model.cStreetAddress, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cStreetAddress, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>City</label><br />
+                            @Html.EditorFor(model => model.cCity, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cCity, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            <label>Country</label><br />
+                            @Html.EditorFor(model => model.cCountry, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cCountry, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            <label>Zip Code</label><br />
+                            @Html.EditorFor(model => model.cZipCode, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cZipCode, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            <label>Contact Numder</label><br />
+                            @Html.EditorFor(model => model.cContactNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cContactNumber, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            <br />
+                            <label>Alternative Number (Optional)</label><br />
+                            @Html.EditorFor(model => model.cContactNumber2, new { htmlAttributes = new { @class = "form-control" } })
+                            @* @Html.ValidationMessageFor(model => model.cContactNumber2, "", new { @class = "text-danger" })*@
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div style="margin-top:6px">
+                            <input style="width:100%; align-self:center " type="submit" id="Add-Cater" class="btn btn-primary" value="Save" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+    </div> @* ---------   END Cater Tab -------*@
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+   <script>
+
+       $("#Add-Cater").on("click", function (e) {
+           if ($(" #cfrm").validate().element("#CaterServiceName") &&
+            $(" #cfrm").validate().element("#cStreetAddres") &&
+            $(" #cfrm").validate().element("#cCity")&&
+               $(" #cfrm").validate().element("#cCountry") &&
+               $(" #cfrm").validate().element("#cZipCode") &&
+               $(" #cfrm").validate().element("#cContactNumber")) {
+           }
+           else {
+
+               e.preventDefault();
+               return false;
+           }
+       });
+
+    </script>
+        }
+
+<style>
+    body {
+        line-height: none !important;
+    }
+
+    .form-div {
+        background-color: #ffffff;
+        /*border: solid;*/
+        /*border-radius: 6px;
+        border-width: 2px;
+        border-color: #FF5722;*/
+        padding: 20px;
+    }
+
+    .Features {
+    }
+
+    .info {
+        margin-top: 3px;
+        background-color: #e7f3fe;
+        border-left: 3px solid #2196F3;
+    }
+
+    .FeaturesSelected {
+        padding: 2px 8px;
+        background-color: rgba(231,235,238,7);
+        border: 1px solid lightgray;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 3px;
+    }
+
+    .glyphicon-camera {
+        font-size: 60px;
+    }
+
+    .FeaturesSelected:hover {
+        background-color: lightgray;
+    }
+
+    .FeaturesSelected i {
+        color: darkred;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    #fh5co-header {
+        background-color: #FF5722;
+    }
+</style>

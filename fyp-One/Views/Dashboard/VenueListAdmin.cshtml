@@ -1,0 +1,239 @@
+﻿@model IEnumerable<fyp_One.Models.VenueInfo>
+@{
+    ViewBag.Title = "VenueListAdmin";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+<!-- /. ROW  -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3><strong>Venue List</strong></h3>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>
+                                   User ID
+                                </th>
+
+                                <th>
+                                   Contact Name
+                                </th>
+
+                                <th>
+                                   Contact Number
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.venueName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.venueType)
+                                </th>
+                             
+                                <th>
+                                    @Html.DisplayNameFor(model => model.venueWebsite)
+                                </th>
+                                
+                                <th>
+                                       Status
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.user_id)
+                                    </td>
+                                    <td>
+                                        @item.VenueAddresses.ElementAt(0).vContactName
+                                    </td>
+                                    <td>
+                                        @item.VenueAddresses.ElementAt(0).vContactnum1
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.venueName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.venueType)
+                                    </td>
+                                    
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.venueWebsite)
+                                    </td>
+
+                                    
+                                    <td>
+                                        @if (item.verify == 1)
+                                        {
+                                            <button class="btn btn-success" venue-id="@item.venueInfo_Id" style="color:#fff; margin:5px;">pending</button>
+                                        }
+                                        else if (item.verify == 2)
+                                        {
+                                            <button class="btn btn-primary" venue-id="@item.venueInfo_Id" style="color:#fff; margin:5px;">Verified</button>
+                                        }
+                                        else if (item.verify == 3)
+                                        {
+                                            <button class="btn btn-warning" venue-id="@item.venueInfo_Id" style="color:#fff; margin:5px;">Regected</button>
+                                        }
+                                       </td>
+
+                                    <td>
+                                                                        @*----------------Buttons------------------------*@
+                                        @if (item.verify == 1)
+                                        {
+                                            <button class="btn btn-danger reject-confirm" venue-id="@item.venueInfo_Id"  style="float:right; margin:5px;" > Reject</button>
+                                            <button class="btn btn-success verify-confirm" venue-id="@item.venueInfo_Id" style="float:right; margin:5px" > Verify</button>
+                                        }
+                                        else if (item.verify == 2)
+                                        {
+                                            <button class="btn btn-danger reject-confirm" venue-id="@item.venueInfo_Id" style="float:right; margin:5px;"> Reject</button>
+                                        }
+                                        else if (item.verify == 3)
+                                        {
+                                            <button class="btn btn-success verify-confirm" venue-id="@item.venueInfo_Id" style="float:right; margin:5px" > Verify</button> 
+                                        }
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!--End Advanced Tables -->
+    </div>
+</div>
+<!-- /. ROW  -->
+<input  id="venueid-hidden" hidden/>
+
+<div class="modal fade" id="verify-mod" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="color:#ffffff; background-color:lightgreen;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Verified Confermation</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to Verify?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary verify-btn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="reject-mod" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="color:#ffffff; background-color:red;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Reject Confermation</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to reject?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary rejected-btn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+    <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+
+            $("body").on("click", ".verify-btn", function () {
+                var venueId = $('#venueid-hidden').val();
+                //console.log(456);
+                $.ajax({
+                    url: "/Dashboard/VenueVerification",
+                    data: {
+                        venueId: venueId,
+                        task: "verify"
+
+                    },
+                    success: function (data) {
+                        if (data == "login") {
+                            window.location.href = "@Url.Action("Index", "User")"
+                        }
+                        else if (data == "no rights") {
+
+                        }
+                        else {
+                            location.reload();
+                         }
+                    }
+                });
+            });
+        
+
+        $("body").on("click", ".rejected-btn", function () {
+            var venueId = $('#venueid-hidden').val();
+            console.log(123);
+                $.ajax({
+                    url: "/Dashboard/VenueVerification",
+                    data: {
+                        venueId: venueId,
+                        task: "reject"
+                    },
+                    success: function (data) {
+                        if (data == "login") {
+                            window.location.href = "@Url.Action("Index", "User")"
+                        }
+                        else if (data == "no rights") {
+
+                        }
+                        else {
+                            location.reload();
+                        }
+                    }
+
+                });
+        });
+
+        $("body").on("click", ".verify-confirm", function () {
+            $('#venueid-hidden').val($(this).attr("venue-id"));
+
+            $('#verify-mod').modal({
+                show: 'true'
+            });
+        });
+
+            $("body").on("click", ".reject-confirm", function () {
+                $('#venueid-hidden').val($(this).attr("venue-id"));
+                $('#reject-mod').modal({
+                    show: 'true'
+                });
+            });
+
+
+    </script>
+
+    <script src="assets/js/custom-scripts.js"></script>
+
+
+}

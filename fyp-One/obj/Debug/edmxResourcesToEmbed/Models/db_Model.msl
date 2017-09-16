@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_fypModelStoreContainer" CdmEntityContainer="db_fypEntities">
+    <EntitySetMapping Name="Caters">
+      <EntityTypeMapping TypeName="db_fypModel.Cater">
+        <MappingFragment StoreEntitySet="Cater">
+          <ScalarProperty Name="Verify" ColumnName="Verify" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="CaterServiceName" ColumnName="CaterServiceName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaterAddres">
+      <EntityTypeMapping TypeName="db_fypModel.CaterAddre">
+        <MappingFragment StoreEntitySet="CaterAddres">
+          <ScalarProperty Name="Cater_Id" ColumnName="Cater_Id" />
+          <ScalarProperty Name="cContactNumber2" ColumnName="cContactNumber2" />
+          <ScalarProperty Name="cContactNumber" ColumnName="cContactNumber" />
+          <ScalarProperty Name="cZipCode" ColumnName="cZipCode" />
+          <ScalarProperty Name="cCountry" ColumnName="cCountry" />
+          <ScalarProperty Name="cCity" ColumnName="cCity" />
+          <ScalarProperty Name="cStreetAddress" ColumnName="cStreetAddress" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="db_fypModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="Cater_Id" ColumnName="Cater_Id" />
+          <ScalarProperty Name="Mprice" ColumnName="Mprice" />
+          <ScalarProperty Name="Mtype" ColumnName="Mtype" />
+          <ScalarProperty Name="Mname" ColumnName="Mname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuItems">
+      <EntityTypeMapping TypeName="db_fypModel.MenuItem">
+        <MappingFragment StoreEntitySet="MenuItems">
+          <ScalarProperty Name="Menu_Id" ColumnName="Menu_Id" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="db_fypModel.Photo">
+        <MappingFragment StoreEntitySet="Photo">
+          <ScalarProperty Name="vPhoto" ColumnName="vPhoto" />
+          <ScalarProperty Name="venueInfo_id" ColumnName="venueInfo_id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="db_fypModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="venueInfo_id" ColumnName="venueInfo_id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="db_fypModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venue_rate">
+      <EntityTypeMapping TypeName="db_fypModel.venue_rate">
+        <MappingFragment StoreEntitySet="venue_rate">
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="user_Id" ColumnName="user_Id" />
+          <ScalarProperty Name="venue_Id" ColumnName="venue_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenueAddresses">
+      <EntityTypeMapping TypeName="db_fypModel.VenueAddress">
+        <MappingFragment StoreEntitySet="VenueAddress">
+          <ScalarProperty Name="venueInfo_id" ColumnName="venueInfo_id" />
+          <ScalarProperty Name="vlong" ColumnName="vlong" />
+          <ScalarProperty Name="vlang" ColumnName="vlang" />
+          <ScalarProperty Name="vContactnum2" ColumnName="vContactnum2" />
+          <ScalarProperty Name="vContactnum1" ColumnName="vContactnum1" />
+          <ScalarProperty Name="vZipcode" ColumnName="vZipcode" />
+          <ScalarProperty Name="vCountry" ColumnName="vCountry" />
+          <ScalarProperty Name="vCity" ColumnName="vCity" />
+          <ScalarProperty Name="vStreetAddress" ColumnName="vStreetAddress" />
+          <ScalarProperty Name="vContactName" ColumnName="vContactName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenueDates">
+      <EntityTypeMapping TypeName="db_fypModel.VenueDate">
+        <MappingFragment StoreEntitySet="VenueDate">
+          <ScalarProperty Name="Venue_Id" ColumnName="Venue_Id" />
+          <ScalarProperty Name="VenueDate1" ColumnName="VenueDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenueFeatures">
+      <EntityTypeMapping TypeName="db_fypModel.VenueFeature">
+        <MappingFragment StoreEntitySet="VenueFeatures">
+          <ScalarProperty Name="Id_venueInfo" ColumnName="Id_venueInfo" />
+          <ScalarProperty Name="venuefeatures" ColumnName="venuefeatures" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenueInfoes">
+      <EntityTypeMapping TypeName="db_fypModel.VenueInfo">
+        <MappingFragment StoreEntitySet="VenueInfo">
+          <ScalarProperty Name="verify" ColumnName="verify" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="venueDetail" ColumnName="venueDetail" />
+          <ScalarProperty Name="venuePrice" ColumnName="venuePrice" />
+          <ScalarProperty Name="venueWebsite" ColumnName="venueWebsite" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="venueType" ColumnName="venueType" />
+          <ScalarProperty Name="venueName" ColumnName="venueName" />
+          <ScalarProperty Name="venueInfo_Id" ColumnName="venueInfo_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenueOrders">
+      <EntityTypeMapping TypeName="db_fypModel.VenueOrder">
+        <MappingFragment StoreEntitySet="VenueOrder">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Venue_Id" ColumnName="Venue_Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Guests" ColumnName="Guests" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaterOrders">
+      <EntityTypeMapping TypeName="db_fypModel.CaterOrder">
+        <MappingFragment StoreEntitySet="CaterOrder">
+          <ScalarProperty Name="Menu_Id" ColumnName="Menu_Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Guests" ColumnName="Guests" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

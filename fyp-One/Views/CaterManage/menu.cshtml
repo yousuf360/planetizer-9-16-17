@@ -1,0 +1,147 @@
+﻿@model fyp_One.Models.Cater
+@{
+    ViewBag.Title = "menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<input hidden id="Cater-Id" value="@Model.Id" />
+
+<div class="jumbotron jumboCater-bg">
+    <div class="container" style="background-color:rgba(220,220,220, 0.5); border-radius:0.4px; padding:1.4em; margin-top:110px; color:#333333;">
+        <h1 style="text-align:center; "><strong>@Model.CaterServiceName</strong></h1>
+        <p style="color: #333333; text-align:justify">
+            Looking for a <b>Best caterer</b>? EventPlanatizer offers the gold standard for <b>caterers</b> with links,
+            catering menus and detailed info about <b>top catering businesses</b>.
+            Whether you're planning to cater a wedding reception, corporate event or banquet, <b>Pakistans</b>
+            most creative and stylish caterers are just a click away.
+
+        </p>
+    </div>
+</div>
+<div class="container">
+    
+    <div class="panel-group" id="accordion">
+        @{var counter = 0; }
+        @foreach (var item in Model.Menus) {
+        <div class="panel panel-default" id="panel@(++counter)">
+            <div class="panel-heading p-h-color" style="background-color: #FF5722;">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne">
+                       @item.Mname
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="list-group col-lg-6"> 
+                       @foreach (var item2 in item.MenuItems)
+                       {
+                         <a class="list-group-item">@item2.ItemName</a>
+                       }
+                     </div>
+                    <div class="col-lg-5">
+                        <p>&nbsp;</p>
+                        <p>Rs: @item.Mprice PER HEAD</p>
+                        <p><a href="@Url.Action("menuOrder","CaterManage",new { id=item.Id})" class="btn btn-primary btn-luxe-primary">Add to Cart<i class="ti-angle-right"></i></a></p>
+                    </div>
+                </div>
+            </div>
+            @*<div class="panel panel-default" id="panel2">
+                <div class="panel-heading" style="background-color: #FF5722;">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-target="#collapseTwo"
+                           href="#collapseTwo" class="collapsed">
+                            Menu 2
+                        </a>
+                    </h4>
+
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group col-lg-6">
+                            <a class="list-group-item">Chicken Boti Tikka </a>
+                            <a class="list-group-item">Beef Seekh Kabab</a>
+                            <a class="list-group-item">Mutton Qorma </a>
+                            <a class="list-group-item">Chicken Karahi  </a>
+                            <a class="list-group-item">Peas Pulao</a>
+                            <a class="list-group-item">Nan (Roghni + Plain)</a>
+                            <a class="list-group-item">Raita & Salads (2 Types)</a>
+                            <a class="list-group-item">Fruit Trifle / Gajar Halwa</a>
+                            <a class="list-group-item">Green Tea</a>
+                        </div>
+                        <div class="col-lg-5">
+                            <p>&nbsp;</p>
+                            <p>Rs: 250 PER HEAD</p>
+                            <p><a href="#" class="btn btn-primary btn-luxe-primary">Add to Cart<i class="ti-angle-right"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="panel3">
+                    <div class="panel-heading" style="background-color: #FF5722;">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#collapseThree"
+                               href="#collapseThree" class="collapsed">
+                                Menu 3
+                            </a>
+                        </h4>
+
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group col-lg-6">
+                                <a class="list-group-item">Chicken Steam Roast </a>
+                                <a class="list-group-item">Chicken Qorma </a>
+                                <a class="list-group-item">Beef Kabab Karahi </a>
+                                <a class="list-group-item">Zeera Pulao </a>
+                                <a class="list-group-item">Nan(Rogni + Plain) </a>
+                                <a class="list-group-item">Raita & Salads (2 Types)</a>
+                                <a class="list-group-item">Kheer / Zarda</a>
+                            </div>
+                            <div class="col-lg-5">
+                                <p>&nbsp;</p>
+                                <p>Rs: 200 PER HEAD</p>
+                                <p><a href="#" class="btn btn-primary btn-luxe-primary">Add to Cart<i class="ti-angle-right"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+   } 
+    
+    </div>
+</div>
+        <style>
+            #fh5co-header {
+                background-color: #FF5722;
+            }
+
+            .jumboCater-bg {
+                background: url('../../Content/images/cater-bg.jpg') no-repeat center center fixed;
+                background-size: cover;
+            }
+
+            .panel-heading a:after {
+     font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: #ffffff;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+.panel-title{
+    text-align: center;
+    font-size: x-large !important;
+   
+    color: #ffffff;
+}
+.panel-heading  {
+    background-color: #FF5722;
+    margin:10px;
+}
+.panel-title>a:hover{
+    color: #fbe9e4 !important;
+
+}
+        </style>
+

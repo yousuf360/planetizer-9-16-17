@@ -1,0 +1,278 @@
+﻿
+@model fyp_One.Models.MenuFormViewModel
+
+@{
+    ViewBag.Title = "Add Menu";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@*<div style="height:100px; margin-top:5px;"></div>*@
+@using (Html.BeginForm("MenuForm", "Dashboard",
+                              FormMethod.Post, new { @id = "mfrm", encType = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+
+    <div class="container" id="photo-tab">
+        @* ---------   Form div -------*@
+
+        <div class="col-md-8">
+            <h2><strong>Add a Menu for your Catring Service</strong></h2>
+            <p>
+               
+            </p>
+        </div>
+        <div class="col-lg-5 col-md-5">
+            <div class="form" id="cater-form">
+                <div id="add-cater-frm">
+                    <div class="form-div">
+                        <div class="form-group">
+                             <h3><strong>New Menu</strong></h3><hr/>
+                        </div>
+                        <div class="form-group">
+                            @Html.DropDownList("Cater_Id", null, "Select Cater Name", htmlAttributes: new { @class = "form-control", @placeholder = "Cater Name" })
+                        </div>
+
+                        <div class="form-group">
+                           
+                            <label for="tab1">Menu Name</label><br />
+                            @Html.EditorFor(model => model.mName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.mName, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label>Item Name</label>
+
+                                <input list="" class="form-control" id="ItemName-textbox" type="text">
+                                @Html.HiddenFor(model => model.ItemName, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="info">
+                                    <h4><small> &nbsp;&nbsp; List down all menu item name</small></h4>
+                                </div>
+                            </div>
+
+                            @Html.ValidationMessageFor(model => model.ItemName, "", new { @class = "text-danger" })
+                            <span id="msg1" class="text-danger"></span>
+                            <br />
+                            <div class="ItemName">
+                                ItemName List:
+                            </div>
+                            <br />
+                        </div>
+
+                        <div class="form-group">
+ 
+                            <label for="tab1">Price per head</label><br />
+                            @Html.EditorFor(model => model.mPrice, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.mPrice, "", new { @class = "text-danger" })
+
+                        </div>
+
+                    <div class="form-group">
+
+                        <div style="margin-top:6px">
+                            <input style="width:100%; align-self:center " type="submit" id="Add-Menu" class="btn btn-primary" value="Save" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+</div> 
+            </div>
+        </div>
+    </div> @* ---------   END form -------*@
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+
+
+        $(document).ready(function () {
+
+            var someData = $("#ItemName").val();
+            var feature = someData.slice(0, -1).split(',');
+            console.log(feature);
+            $.each(feature, function (index, value) {
+                if (value.length > 0) {
+                    $('.ItemName').append('<span class="ItemNameSelected"><span class="ItemNameSelectedVal"  temp="' + value + '" name="ItemName">' + value + '.</span>&nbsp;&nbsp;<i>X</i></span> ');
+                }
+
+            });
+            $("button").click(function () {
+                $(".tabs-left li").addClass("active").siblings(".tabs-left li").removeClass('active');
+            });
+        });
+        $("#ItemName-textbox").keypress(function (event) {
+
+            if (event.which == 13) {
+                if ($("#msg").text() == "Please add some ItemName.") {
+                    $("#msg").text('');
+                }
+                if ($("span:contains('" + $('#ItemName-textbox').val() + "')").length > 0) {
+                    $("#msg1").text($('#ItemName-textbox').val() + ' is already in list.');
+                    $('#ItemName-textbox').val("");
+                }
+                else {
+                    $("#msg1").text('');
+                    $('#ItemName').val($('#ItemName').val() + $('#ItemName-textbox').val() + ',');
+                    $('.ItemName').append('<span class="ItemNameSelected"><span class="ItemNameSelectedVal"  temp="' + $('#ItemName-textbox').val() + '" name="ItemName">' + $('#ItemName-textbox').val() + '.</span>&nbsp;&nbsp;<i>X</i></span> ');
+                    $('#ItemName-textbox').val("");
+                }
+                return false;
+            }
+            else {
+                $("#msg1").text('');
+                return true;
+            }
+        });
+         
+
+        $("body").on("click", ".ItemNameSelected", function () {
+            $('#ItemName').val($('#ItemName').val().replace($(this).children(':first').attr('temp') + ',', ''));
+            $("#msg1").text('');
+            this.remove();
+
+        });
+
+
+       //$("#Add-Cater").on("click", function (e) {
+       //    if ($(" #cfrm").validate().element("#CaterServiceName") &&
+       //     $(" #cfrm").validate().element("#cStreetAddres") &&
+       //     $(" #cfrm").validate().element("#cCity")&&
+       //        $(" #cfrm").validate().element("#cCountry") &&
+       //        $(" #cfrm").validate().element("#cZipCode") &&
+       //        $(" #cfrm").validate().element("#cContactNumber")) {
+       //    }
+       //    else {
+
+       //        e.preventDefault();
+       //        return false;
+       //    }
+        //});
+
+        $("Add-Menu").on("Click", function (e) {
+            if ($("#mfrm").validate().element("#MenuName")&&
+                $("#mfrm").validate().element("#mPrice")) {
+
+            }
+            else {
+                e.preventDefault();
+                return false;
+            }
+
+        });
+
+       //Dynamic Form Fields
+       
+       $(document).ready(function () {
+           window.countElementsIn = function (containerSel, patternSel) {
+               var parentE = jQuery(containerSel);
+               var parentCnt = parentE.length;
+               if (parentCnt > 0) {
+                   return parentE.find(patternSel);
+               }
+               return 0;
+           }
+
+           window.genInput = function (baseName, type, val, extraClass) {
+               return '<input class="input form-control ' + extraClass + '" name="' + baseName + '" type="' + type + '" value="' + val + '">';
+           }
+
+           window.genBtn = function (label, extraClass) {
+               return '<button class="btn ' + extraClass + '" >' + label + '</button></div>';
+           }
+
+           window.genNewRow = function (type, val) {
+               switch (type) {
+                   default:
+                       return '<div class="row-fluid record"><div class="span12">' + genInput('ItemName', 'text', val) + ' ' + genBtn('-', 'btn-danger remove-parent') + '</div></div>';
+               }
+               console.log('Check your code Im broken...')
+               return ''; // should never happen
+           }
+           jQuery(".add").on('click', function (e) {
+               e.preventDefault(); // prevents button weird behaviour
+               var me = jQuery(this);
+               var addTo = me.data('append-to') != undefined ? me.data('append-to') : "#container";
+               var newType = me.data('append-type') != undefined ? me.data('append-type') : 'text'; // text is just default
+               var newRec = genNewRow(newType, me.prev().val());
+               jQuery(addTo).append(newRec);
+               me.prev().val(''); // wipe our value
+
+               jQuery('.remove-parent').click(function () {
+                   e.preventDefault(); // prevents button weird behaviour
+                   jQuery(this).parent().remove();
+               });
+           });
+
+
+       });
+
+       
+    </script>
+}
+
+<style>
+
+
+#field {
+    margin-bottom:20px;
+}
+    body {
+        line-height: none !important;
+    }
+
+    .form-div {
+        background-color: #ffffff;
+        /*border: solid;
+        border-radius: 6px;
+        border-width: 2px;
+        border-color: #FF5722;*/
+        padding: 20px;
+    }
+
+    .Features {
+    }
+
+    .info {
+        margin-top: 3px;
+        background-color: #e7f3fe;
+        border-left: 3px solid #2196F3;
+    }
+
+    .ItemNameSelected {
+        padding: 2px 8px;
+        background-color: rgba(231,235,238,7);
+        border: 1px solid lightgray;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 3px;
+    }
+
+    .glyphicon-camera {
+        font-size: 60px;
+    }
+
+    .ItemNameSelected:hover {
+        background-color: lightgray;
+    }
+
+    .ItemNameSelected i {
+        color: darkred;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    #fh5co-header {
+        background-color: #FF5722;
+    }
+    .record{
+        width:50%
+    }
+</style>
+
+
+

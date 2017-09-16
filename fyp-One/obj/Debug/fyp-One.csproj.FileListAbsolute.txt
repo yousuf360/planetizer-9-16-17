@@ -1,0 +1,622 @@
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\csc.exe
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\vbc.exe
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\fyp-One.dll.config
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\fyp-One.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\fyp-One.pdb
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\EntityFramework.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Owin.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Razor.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\WebGrease.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.Razor.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\EntityFramework.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+c:\users\faizan\documents\visual studio 2015\Projects\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\csc.exe
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\vbc.exe
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\fyp-One.dll.config
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\fyp-One.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\fyp-One.pdb
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\EntityFramework.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Owin.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Razor.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\WebGrease.dll
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.Razor.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\EntityFramework.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\BAGHAIRAT\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\csc.exe
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\vbc.exe
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\fyp-One.dll.config
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\fyp-One.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\EntityFramework.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Owin.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Razor.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\WebGrease.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.Razor.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\EntityFramework.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\csc.exe
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\vbc.exe
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\fyp-One.dll.config
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\fyp-One.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\EntityFramework.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Razor.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\WebGrease.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.Razor.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\EntityFramework.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\FAIZAN\Desktop\FYP-Event\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\csc.exe
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\vbc.exe
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\fyp-One.dll.config
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\fyp-One.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\EntityFramework.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Razor.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\WebGrease.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.Razor.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\EntityFramework.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\FAIZAN\Desktop\FYP-Event-faizan\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\csc.exe
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\vbc.exe
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\fyp-One.dll.config
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\fyp-One.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\fyp-One.pdb
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\EntityFramework.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Owin.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Razor.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\WebGrease.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.Razor.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\EntityFramework.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\FAIZAN\Desktop\FYP-2-MID\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\csc.exe
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\vbc.exe
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\fyp-One.dll.config
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\fyp-One.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\fyp-One.pdb
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\EntityFramework.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Owin.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Razor.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\WebGrease.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.Razor.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\EntityFramework.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\faiza\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\faiza\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\faiza\Desktop\fyp-One\fyp-One\obj\Debug\fyp-One.pdb
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\csc.exe
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\vbc.exe
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\fyp-One.dll.config
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\fyp-One.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\fyp-One.pdb
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Antlr3.Runtime.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\EntityFramework.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Newtonsoft.Json.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Owin.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Helpers.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Mvc.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Optimization.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Razor.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.WebPages.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\WebGrease.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Helpers.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Mvc.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Optimization.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.Razor.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.WebPages.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Newtonsoft.Json.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\EntityFramework.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\obj\Debug\fyp-One.dll
+C:\Users\Sheryar Khan\Documents\VS Community Projects\Planitizer\fyp-One\obj\Debug\fyp-One.pdb
+C:\Work\Planitizer\fyp-One\bin\roslyn\csc.exe
+C:\Work\Planitizer\fyp-One\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Work\Planitizer\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Work\Planitizer\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Work\Planitizer\fyp-One\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Work\Planitizer\fyp-One\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Work\Planitizer\fyp-One\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Work\Planitizer\fyp-One\bin\roslyn\System.Collections.Immutable.dll
+C:\Work\Planitizer\fyp-One\bin\roslyn\System.Reflection.Metadata.dll
+C:\Work\Planitizer\fyp-One\bin\roslyn\vbc.exe
+C:\Work\Planitizer\fyp-One\bin\roslyn\VBCSCompiler.exe
+C:\Work\Planitizer\fyp-One\bin\roslyn\VBCSCompiler.exe.config
+C:\Work\Planitizer\fyp-One\bin\fyp-One.dll.config
+C:\Work\Planitizer\fyp-One\bin\fyp-One.dll
+C:\Work\Planitizer\fyp-One\bin\fyp-One.pdb
+C:\Work\Planitizer\fyp-One\bin\Antlr3.Runtime.dll
+C:\Work\Planitizer\fyp-One\bin\EntityFramework.dll
+C:\Work\Planitizer\fyp-One\bin\EntityFramework.SqlServer.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Google.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Web.Infrastructure.dll
+C:\Work\Planitizer\fyp-One\bin\Newtonsoft.Json.dll
+C:\Work\Planitizer\fyp-One\bin\Owin.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.Helpers.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.Mvc.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.Optimization.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.Razor.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.WebPages.Deployment.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.WebPages.dll
+C:\Work\Planitizer\fyp-One\bin\System.Web.WebPages.Razor.dll
+C:\Work\Planitizer\fyp-One\bin\WebGrease.dll
+C:\Work\Planitizer\fyp-One\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.Helpers.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.Mvc.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.Optimization.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.Razor.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.WebPages.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.WebPages.Deployment.xml
+C:\Work\Planitizer\fyp-One\bin\System.Web.WebPages.Razor.xml
+C:\Work\Planitizer\fyp-One\bin\Antlr3.Runtime.pdb
+C:\Work\Planitizer\fyp-One\bin\Newtonsoft.Json.xml
+C:\Work\Planitizer\fyp-One\bin\EntityFramework.xml
+C:\Work\Planitizer\fyp-One\bin\EntityFramework.SqlServer.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Google.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Work\Planitizer\fyp-One\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Work\Planitizer\fyp-One\obj\Debug\fyp-One.csprojResolveAssemblyReference.cache
+C:\Work\Planitizer\fyp-One\obj\Debug\fyp-One.csproj.CoreCompileInputs.cache
+C:\Work\Planitizer\fyp-One\obj\Debug\fyp-One.dll
+C:\Work\Planitizer\fyp-One\obj\Debug\fyp-One.pdb

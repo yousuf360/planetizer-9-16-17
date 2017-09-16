@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_fypModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cater">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CaterServiceName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+    <Property Name="Verify" Type="int" />
+  </EntityType>
+  <EntityType Name="CaterAddres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cStreetAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cCity" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cCountry" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cZipCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cContactNumber" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="cContactNumber2" Type="varchar" MaxLength="15" />
+    <Property Name="Cater_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CaterOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EventDate" Type="date" Nullable="false" />
+    <Property Name="Guests" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Menu_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mtype" Type="varchar" MaxLength="50" />
+    <Property Name="Mprice" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Cater_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuItems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" />
+    <Property Name="Menu_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="venueInfo_id" Type="int" Nullable="false" />
+    <Property Name="vPhoto" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="venueInfo_id" Type="int" Nullable="false" />
+    <Property Name="photo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="100" />
+    <Property Name="last_name" Type="varchar" MaxLength="100" />
+    <Property Name="user_name" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="type" Type="nvarchar" MaxLength="50" />
+    <Property Name="mobile" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="venue_rate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="venue_Id" Type="int" Nullable="false" />
+    <Property Name="user_Id" Type="int" Nullable="false" />
+    <Property Name="rate" Type="numeric" Precision="2" Scale="1" />
+  </EntityType>
+  <EntityType Name="VenueAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vContactName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vStreetAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vCity" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vCountry" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vZipcode" Type="int" Nullable="false" />
+    <Property Name="vContactnum1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="vContactnum2" Type="varchar" MaxLength="20" />
+    <Property Name="vlang" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="vlong" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="venueInfo_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VenueDate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VenueDate" Type="date" />
+    <Property Name="Venue_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VenueFeatures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="venuefeatures" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id_venueInfo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VenueInfo">
+    <Key>
+      <PropertyRef Name="venueInfo_Id" />
+    </Key>
+    <Property Name="venueInfo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="venueName" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="venueType" Type="varchar" MaxLength="50" />
+    <Property Name="capacity" Type="int" Nullable="false" />
+    <Property Name="venueWebsite" Type="varchar" MaxLength="50" />
+    <Property Name="venuePrice" Type="int" Nullable="false" />
+    <Property Name="venueDetail" Type="varchar" MaxLength="50" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="verify" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VenueOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EventDate" Type="date" Nullable="false" />
+    <Property Name="Guests" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Venue_Id" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Cater_ToTable">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Cater" Type="Self.Cater" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Cater">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaterAddres_ToTable">
+    <End Role="Cater" Type="Self.Cater" Multiplicity="1" />
+    <End Role="CaterAddres" Type="Self.CaterAddres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cater">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CaterAddres">
+        <PropertyRef Name="Cater_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaterOrder_ToTable">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="CaterOrder" Type="Self.CaterOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CaterOrder">
+        <PropertyRef Name="Menu_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_ToTable">
+    <End Role="Cater" Type="Self.Cater" Multiplicity="1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cater">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="Cater_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuItems_ToTable">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="MenuItems" Type="Self.MenuItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuItems">
+        <PropertyRef Name="Menu_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Photo_ToTable">
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="1" />
+    <End Role="Photo" Type="Self.Photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="Photo">
+        <PropertyRef Name="venueInfo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_ToTable">
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="1" />
+    <End Role="VenueFeatures" Type="Self.VenueFeatures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueFeatures">
+        <PropertyRef Name="Id_venueInfo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venue_Rating_ToTable_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="venue_rate" Type="Self.venue_rate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="venue_rate">
+        <PropertyRef Name="user_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venue_Rating_ToTable_venue">
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="venue_rate" Type="Self.venue_rate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="venue_rate">
+        <PropertyRef Name="venue_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueAddress_ToTable">
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="1" />
+    <End Role="VenueAddress" Type="Self.VenueAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueAddress">
+        <PropertyRef Name="venueInfo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueDate_ToTable">
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="1" />
+    <End Role="VenueDate" Type="Self.VenueDate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueDate">
+        <PropertyRef Name="Venue_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueInfo_ToTable">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="VenueInfo">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueOrder_ToTable">
+    <End Role="VenueInfo" Type="Self.VenueInfo" Multiplicity="1" />
+    <End Role="VenueOrder" Type="Self.VenueOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueOrder">
+        <PropertyRef Name="Venue_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_fypModelStoreContainer">
+    <EntitySet Name="Cater" EntityType="Self.Cater" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaterAddres" EntityType="Self.CaterAddres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaterOrder" EntityType="Self.CaterOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuItems" EntityType="Self.MenuItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Photo" EntityType="Self.Photo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="venue_rate" EntityType="Self.venue_rate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VenueAddress" EntityType="Self.VenueAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VenueDate" EntityType="Self.VenueDate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VenueFeatures" EntityType="Self.VenueFeatures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VenueInfo" EntityType="Self.VenueInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VenueOrder" EntityType="Self.VenueOrder" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cater_ToTable" Association="Self.FK_Cater_ToTable">
+      <End Role="User" EntitySet="User" />
+      <End Role="Cater" EntitySet="Cater" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaterAddres_ToTable" Association="Self.FK_CaterAddres_ToTable">
+      <End Role="Cater" EntitySet="Cater" />
+      <End Role="CaterAddres" EntitySet="CaterAddres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaterOrder_ToTable" Association="Self.FK_CaterOrder_ToTable">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="CaterOrder" EntitySet="CaterOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_ToTable" Association="Self.FK_Menu_ToTable">
+      <End Role="Cater" EntitySet="Cater" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuItems_ToTable" Association="Self.FK_MenuItems_ToTable">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="MenuItems" EntitySet="MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Photo_ToTable" Association="Self.FK_Photo_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+      <End Role="Photo" EntitySet="Photo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_ToTable" Association="Self.FK_Table_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+      <End Role="VenueFeatures" EntitySet="VenueFeatures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venue_Rating_ToTable_User" Association="Self.FK_venue_Rating_ToTable_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="venue_rate" EntitySet="venue_rate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venue_Rating_ToTable_venue" Association="Self.FK_venue_Rating_ToTable_venue">
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+      <End Role="venue_rate" EntitySet="venue_rate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueAddress_ToTable" Association="Self.FK_VenueAddress_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+      <End Role="VenueAddress" EntitySet="VenueAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueDate_ToTable" Association="Self.FK_VenueDate_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+      <End Role="VenueDate" EntitySet="VenueDate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueInfo_ToTable" Association="Self.FK_VenueInfo_ToTable">
+      <End Role="User" EntitySet="User" />
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueOrder_ToTable" Association="Self.FK_VenueOrder_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfo" />
+      <End Role="VenueOrder" EntitySet="VenueOrder" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

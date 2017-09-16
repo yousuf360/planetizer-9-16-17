@@ -1,0 +1,315 @@
+﻿@model List<fyp_One.Models.VenueInfo>
+@{
+    ViewBag.Title = "Venue List";
+}
+<link href="~/Content/ratingScript/s tar-rating.css" media="all" rel="stylesheet" />
+
+<div class="jumbotron jumboVenue-bg">
+    <div class="container" style="background-color:rgba(220,220,220, 0.5); border-radius:0.4px; padding:1.4em; margin-top:110px; color:#333333;">
+        <h1 style="text-align:center; "><strong>Wedding Venues</strong></h1>
+        <p style="color: #333333; text-align:justify">
+            The perfect ambience for the <b>wedding</b> of your dreams awaits! Let EventSource.ca do the legwork for you with virtual tours,
+            details and photos of <b>Pakistans's top wedding halls</b> and <b>Pakistan wedding reception venues</b>.
+            Whether your style is romantic and intimate, elegant, formal or fun, we have the <b>wedding location</b> for you.
+        </p>
+    </div>
+</div>
+
+
+ <div class="container-fluid">
+     
+         <div class="row">
+             @*<div class="container">
+                 <div style="background-color: #fafafa;    border: 1px solid #d9d9d9;    margin-bottom: 25px;    padding: 12px 17px 12px 15px;
+                                    height: 60px;    color: #b2b2b2; ">
+                     <h3><strong>Wedding Venues</strong></h3>
+                 </div>
+
+                 <div class="venue-list-info visible-lg visible-md">
+                     <p>
+                         The perfect ambience for the <b>wedding</b> of your dreams awaits! Let EventSource.ca do the legwork for you with virtual tours,
+                         details and photos of <b>Pakistans's top wedding halls</b> and <b>Pakistan wedding reception venues</b>.
+                         Whether your style is romantic and intimate, elegant, formal or fun, we have the <b>wedding location</b> for you.
+                     </p>
+                 </div>
+                 <br />
+             </div>*@
+             @* -------------- VENUE LIST --------------------*@
+
+             <div class="wrapper cf">
+
+                 @*  -------------Side Bar ----------------*@
+                 <div class="sidebar col-lg-3 col-md-3 col-sm-3">
+                     <h2>Search</h2>
+                     <div class="filter-input">
+                         @*<input type="search" class="form-control" placeholder="Enter keyword" />*@
+                  </div> 
+                     <div class="filter-input">
+                         <label for="filter">Filter by:</label>
+                         <section class="">
+                             @Html.DropDownList("search-type", new SelectListItem[]{
+                                                new SelectListItem() {Text = "Banquet Hall", Value="Banquet Hall"},
+                                                new SelectListItem() {Text = "Open Lawn", Value="Open Lawn"},
+                                                new SelectListItem() {Text = "Covered Lawn", Value="Covered Lawn"},
+                                                new SelectListItem() {Text = "Other", Value="Other"}}, " Select Venue Type",
+                                                 new {@class= "form-control" })
+
+                         </section>
+                     </div>
+                     <div class="filter-input">
+                         <label>Price</label>
+                         <ul>
+                             <li class="fl-price">
+                                 <input type="number" class="form-control" placeholder="From" />
+                             </li>
+                            <li class="fl-price">
+                                <input type="number" class="form-control" placeholder="To" />
+                            </li>
+                           
+                          </ul>
+                     </div>
+                     <div class="filter-input">&nbsp;</div>
+
+                     <div class="filter-input">
+                         <label>Hall Capacity</label>
+                         <div class="radio">
+                             <label><input type="radio" name="optradio" value="0" checked="checked">Any</label>
+                         </div>
+
+                         <div class="radio">
+                             <label><input type="radio" name="optradio">200 - 300 Person</label>
+                         </div>
+                         <div class="radio">
+                             <label><input type="radio" name="optradio">300 - 500 Person</label>
+                         </div>
+                         <div class="radio">
+                             <label><input type="radio" name="optradio">500 - 800 Person</label>
+                         </div>
+                         <div class="radio">
+                             <label><input type="radio" name="optradio">800+ Person</label>
+                         </div>
+                     </div>
+
+                     <div class="filter-input">
+                         <input class="btn btn-primary" id="filter-venu" value="Search" type="submit">
+                     </div>
+
+                 </div>
+                 @*  -------------End Side Bar ----------------*@
+                 
+                     <div class="content col-lg-8 col-md-8 col-sm-8 ">
+                         
+                             @foreach (var item in Model)
+                             {
+                                 <div class="feature-full-1col">
+
+                                     <div class="image" style="background-image: url('@("../../Uploads/venue-" + item.venueInfo_Id + "/1.JPG")');">
+                                         <div class="descrip text-center">
+                                             <p><small>For as low as</small><span id="display-price">Rs @item.venuePrice</span></p>
+                                         </div>
+                                     </div>
+                                     <div class="desc">
+                                         <div class="col-lg-8 col-md-11 col-sm-10">
+                                             <h3 id="display-name" style="margin-top: 15px;">
+                                                 <b>@item.venueName</b>
+                                                 @if (item.verify == 2)
+                                                 {
+                                                     <span class="glyphicon glyphicon-ok-sign" style="color:#FF5722;" title="Verified"></span>
+
+                                                 }
+                                             </h3>
+
+                                         </div>
+                                         <div class="col-lg-8 col-md-11 col-sm-10">
+                                             @{var rated = item.venue_rate.Select(x => x.rate);
+                                                 decimal averageRated = 0;
+                                                 if (rated.Count() > 0)
+                                                 {
+                                                     averageRated = rated.Sum().Value / rated.Count();
+                                                 } }
+                                             <input value="@(averageRated)" id="rating-venue" type="number" class="rating-loading rating" data-show-clear="false" data-show-caption="false" data-size="xs" data-readonly="true" />
+                                         </div>
+
+                                         <div class="col-lg-8 col-md-11 col-sm-10">
+                                             <p id="display-addr"><strong>Address</strong> &nbsp;@item.VenueAddresses.ElementAt(0).vStreetAddress, @item.VenueAddresses.ElementAt(0).vCity</p>
+                                         </div>
+                                         <div class="col-lg-8 col-md-11 col-sm-10">
+                                             <p id="display-cap"><strong>Capacity</strong> &nbsp;@item.capacity</p>
+                                         </div>
+                                         <div class="col-lg-8 col-md-11 col-sm-10">
+                                             <p>
+                                                 <a href="/venuemanage/book?id=@(item.venueInfo_Id)" class="btn btn-primary btn-luxe-primary">
+                                                     See Details
+                                                     <i class="ti-angle-right"></i>
+                                                 </a>
+                                             </p>
+                                         </div>
+                                     </div>
+
+                                 </div>
+                               }         @*-----End loop------*@
+
+                          </div>  @*-----End col class div----*@
+                
+                                        
+             </div> 
+         </div> @*---- End Row----*@
+    
+ </div> @*---- container-fluid---*@
+                
+        
+@section Scripts{
+<script src="~/Content/ratingScript/star-rating.js"></script>
+           
+            
+<script>
+    //$(function () {
+    //    var sidebar = $('.sidebar');
+    //    var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
+
+    //    $(window).scroll(function (event) {
+    //        var y = $(this).scrollTop();
+    //        if (y >= top) {
+    //            sidebar.addClass('fixed');
+    //        }
+
+    //        else {
+    //            sidebar.removeClass('fixed');
+    //        }
+    //    });
+    //});
+</script>
+
+<script>
+        $(document).ready(function(){
+            $('body').on('click', '#filter-venu', function () {
+                var from = $('#from').val();
+                if (from == null)
+                    from = 0;
+                var to = $('#to').val();
+                if (to == null)
+                    to = 0;
+
+                window.location.href = "http://localhost:2321/Home/VenueSearch?type=" + $('#search-type').val() + "&from=" + from + "&to=" + to + "&capacity=" + $("input[name='optradio']:checked").val();;
+            });
+        })
+
+
+</script>
+
+}
+
+<style>
+.feature-full-1col {
+    border: solid;
+    border-width: 1.4px;
+    border-color: silver;
+    margin: 15px;
+}
+
+.feature-full-1col:hover {
+    border: solid;
+    border-width: 1.4px;
+    border-color: #FF5722;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#fh5co-header {
+    background-color: #FF5722;
+}
+
+.venue-list-info p {
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #0c0c0c;
+}
+.feature-full-1col .desc {
+  padding: 20px !important;
+}
+.filter-input{
+    margin:15px 0px;
+    width:100%;
+    color:rgba(0, 0, 0, 0.7) ;
+}
+.form-control{
+    border-radius:4px !important;
+    padding: 6px 12px !important;
+    height: initial;
+}
+#filter-venu{
+    width: 100%;
+    font-size: x-large;
+    padding: 5px;
+}
+.fl-price{
+    width:50%;
+}
+ul {
+  list-style-type: none;
+}
+li{ 
+    float:right;
+    padding-right:10px;
+}    
+
+                                /*Sticky Position*/ 
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+} 
+.wrapper {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 200px;
+}
+.sidebar {
+  padding: 20px;
+  background-color: rgba(220,220,220, 0.4);
+  box-shadow: 0px 0px 14px #808080;
+  border-radius:4px;
+  
+}
+
+.sidebar h3 {
+  margin: 0;
+}
+
+.sidebar {
+  float: left;
+  margin:20px 20px 20px 30px;
+}
+.content {
+        float: right;
+        margin-right:35px;
+        padding-left:initial
+}
+
+/* The sticky Sidebar */
+
+.fixed {  position: fixed; top: 0; }
+
+.jumboVenue-bg {
+    background: url('../../Content/images/jumbovenu-bg.jpg') no-repeat center center fixed;
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>

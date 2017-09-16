@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{991AE417-CE97-4B49-8B72-2D80552A2758}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fyp_One</RootNamespace>
+    <AssemblyName>fyp-One</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44334</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CaterManageController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VenueManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Cater.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaterAddre.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaterEditVM.cs" />
+    <Compile Include="Models\CaterOrder.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DashBoardViewModel.cs" />
+    <Compile Include="Models\db_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Menu.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MenuItem.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="Models\Photo.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Table.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserViewModels.cs" />
+    <Compile Include="Models\VenueAddress.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VenueDate.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VenueEditVM.cs" />
+    <Compile Include="Models\VenueFeature.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VenueInfo.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VenueOrder.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\venue_rate.cs">
+      <DependentUpon>db_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\db_fyp.mdf" />
+    <Content Include="App_Data\db_fyp_log.ldf">
+      <DependentUpon>db_fyp.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\booking-styles.css" />
+    <Content Include="Content\bootstrap-datepicker.min.css" />
+    <Content Include="Content\cs-select.css" />
+    <Content Include="Content\cs-skin-border.css" />
+    <Content Include="Content\dashboard\assets\css\bootstrap-theme.min.css" />
+    <Content Include="Content\dashboard\assets\css\bootstrap.css" />
+    <Content Include="Content\dashboard\assets\css\custom-styles.css" />
+    <Content Include="Content\dashboard\assets\css\font-awesome.css" />
+    <Content Include="Content\dashboard\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\dashboard\assets\img\DashBoard-Logo-hover.png" />
+    <Content Include="Content\dashboard\assets\img\DashBoard-Logo.png" />
+    <Content Include="Content\dashboard\assets\js\bootstrap.min.js" />
+    <Content Include="Content\dashboard\assets\js\chart-data.js" />
+    <Content Include="Content\dashboard\assets\js\chart.min.js" />
+    <Content Include="Content\dashboard\assets\js\custom-scripts.js" />
+    <Content Include="Content\dashboard\assets\js\custom.js" />
+    <Content Include="Content\dashboard\assets\js\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Content\dashboard\assets\js\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Content\dashboard\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="Content\dashboard\assets\js\easypiechart-data.js" />
+    <Content Include="Content\dashboard\assets\js\easypiechart.js" />
+    <Content Include="Content\dashboard\assets\js\jquery-1.10.2.js" />
+    <Content Include="Content\dashboard\assets\js\jquery.metisMenu.js" />
+    <Content Include="Content\dashboard\assets\js\morris\morris-0.4.3.min.css" />
+    <Content Include="Content\dashboard\assets\js\morris\morris.js" />
+    <Content Include="Content\dashboard\assets\js\morris\raphael-2.1.0.min.js" />
+    <Content Include="Content\dashboard\style.css" />
+    <Content Include="Content\flaticon.css" />
+    <Content Include="Content\flexslider.css" />
+    <Content Include="Content\icomoon.css" />
+    <Content Include="Content\images\arrow_down_input.png" />
+    <Content Include="Content\images\cater-bg.jpg" />
+    <Content Include="Content\images\hotel_feture_1.jpg" />
+    <Content Include="Content\images\hotel_feture_2.jpg" />
+    <Content Include="Content\images\hotel_feture_3.jpg" />
+    <Content Include="Content\images\image-1.jpg" />
+    <Content Include="Content\images\image-2.jpg" />
+    <Content Include="Content\images\image-3.jpg" />
+    <Content Include="Content\images\image-4.jpg" />
+    <Content Include="Content\images\image-5.jpg" />
+    <Content Include="Content\images\image-6.jpg" />
+    <Content Include="Content\images\jumbovenu-bg.jpg" />
+    <Content Include="Content\images\loader.gif" />
+    <Content Include="Content\images\loc.png" />
+    <Content Include="Content\images\no-img.png" />
+    <Content Include="Content\images\p-logo-w.png" />
+    <Content Include="Content\images\signupBg.jpg" />
+    <Content Include="Content\images\slider1.jpg" />
+    <Content Include="Content\images\slider2.jpg" />
+    <Content Include="Content\images\slider3.jpg" />
+    <Content Include="Content\images\tab_img_1.jpg" />
+    <Content Include="Content\images\tab_img_2.jpg" />
+    <Content Include="Content\images\tab_img_3.jpg" />
+    <Content Include="Content\images\tab_img_4.jpg" />
+    <Content Include="Content\images\tab_img_5.jpg" />
+    <Content Include="Content\images\tab_img_6.jpg" />
+    <Content Include="Content\login\normalize.css" />
+    <Content Include="Content\login\reset.css" />
+    <Content Include="Content\login\style.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\owl.theme.default.min.css" />
+    <Content Include="Content\ratingScript\star-rating.css" />
+    <Content Include="Content\ratingScript\star-rating.js" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\superfish.css" />
+    <Content Include="Content\themify-icons.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\flaticon\flaticon.css" />
+    <Content Include="fonts\flaticon\flaticon.html" />
+    <Content Include="fonts\flaticon\flaticon.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon\icomoon.svg" />
+    <Content Include="fonts\themify\themify.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\style.css.map" />
+    <Content Include="Models\db_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>db_Model.edmx</DependentUpon>
+      <LastGenOutput>db_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\db_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>db_Model.edmx</DependentUpon>
+      <LastGenOutput>db_Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\classie.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\google_map.js" />
+    <Content Include="Scripts\hoverIntent.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery.countTo.js" />
+    <Content Include="Scripts\jquery.flexslider-min.js" />
+    <Content Include="Scripts\jquery.stellar.min.js" />
+    <Content Include="Scripts\jquery.waypoints.min.js" />
+    <Content Include="Scripts\jssor.slider-22.0.15.debug.js" />
+    <Content Include="Scripts\jssor.slider-22.0.15.min.js" />
+    <Content Include="Scripts\jssor.slider-22.0.15.mini.js" />
+    <Content Include="Scripts\modernizr-2.6.2.min.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\selectFx.js" />
+    <Content Include="Scripts\superfish.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\dashboard\assets\font-awesome\" />
+    <Folder Include="Content\sass\bootstrap\mixins\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Content\sass\style.scss" />
+    <Content Include="Content\sass\_bootstrap-compass.scss" />
+    <Content Include="Content\sass\_bootstrap-mincer.scss" />
+    <Content Include="Content\sass\_bootstrap-sprockets.scss" />
+    <Content Include="Content\sass\_bootstrap.scss" />
+    <Content Include="Content\sass\bootstrap\_alerts.scss" />
+    <Content Include="Content\sass\bootstrap\_badges.scss" />
+    <Content Include="Content\sass\bootstrap\_breadcrumbs.scss" />
+    <Content Include="Content\sass\bootstrap\_button-groups.scss" />
+    <Content Include="Content\sass\bootstrap\_buttons.scss" />
+    <Content Include="Content\sass\bootstrap\_carousel.scss" />
+    <Content Include="Content\sass\bootstrap\_close.scss" />
+    <Content Include="Content\sass\bootstrap\_code.scss" />
+    <Content Include="Content\sass\bootstrap\_component-animations.scss" />
+    <Content Include="Content\sass\bootstrap\_dropdowns.scss" />
+    <Content Include="Content\sass\bootstrap\_forms.scss" />
+    <Content Include="Content\sass\bootstrap\_glyphicons.scss" />
+    <Content Include="Content\sass\bootstrap\_grid.scss" />
+    <Content Include="Content\sass\bootstrap\_input-groups.scss" />
+    <Content Include="Content\sass\bootstrap\_jumbotron.scss" />
+    <Content Include="Content\sass\bootstrap\_labels.scss" />
+    <Content Include="Content\sass\bootstrap\_list-group.scss" />
+    <Content Include="Content\sass\bootstrap\_media.scss" />
+    <Content Include="Content\sass\bootstrap\_mixins.scss" />
+    <Content Include="Content\sass\bootstrap\_modals.scss" />
+    <Content Include="Content\sass\bootstrap\_navbar.scss" />
+    <Content Include="Content\sass\bootstrap\_navs.scss" />
+    <Content Include="Content\sass\bootstrap\_normalize.scss" />
+    <Content Include="Content\sass\bootstrap\_pager.scss" />
+    <Content Include="Content\sass\bootstrap\_pagination.scss" />
+    <Content Include="Content\sass\bootstrap\_panels.scss" />
+    <Content Include="Content\sass\bootstrap\_popovers.scss" />
+    <Content Include="Content\sass\bootstrap\_print.scss" />
+    <Content Include="Content\sass\bootstrap\_progress-bars.scss" />
+    <Content Include="Content\sass\bootstrap\_responsive-embed.scss" />
+    <Content Include="Content\sass\bootstrap\_responsive-utilities.scss" />
+    <Content Include="Content\sass\bootstrap\_scaffolding.scss" />
+    <Content Include="Content\sass\bootstrap\_tables.scss" />
+    <Content Include="Content\sass\bootstrap\_theme.scss" />
+    <Content Include="Content\sass\bootstrap\_thumbnails.scss" />
+    <Content Include="Content\sass\bootstrap\_tooltip.scss" />
+    <Content Include="Content\sass\bootstrap\_type.scss" />
+    <Content Include="Content\sass\bootstrap\_utilities.scss" />
+    <Content Include="Content\sass\bootstrap\_variables.scss" />
+    <Content Include="Content\sass\bootstrap\_wells.scss" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\flaticon\flaticon.eot" />
+    <Content Include="fonts\flaticon\flaticon.ttf" />
+    <Content Include="fonts\flaticon\flaticon.woff" />
+    <Content Include="fonts\flaticon\license.pdf" />
+    <Content Include="fonts\icomoon\icomoon.eot" />
+    <Content Include="fonts\icomoon\icomoon.ttf" />
+    <Content Include="fonts\icomoon\icomoon.woff" />
+    <Content Include="fonts\themify\themify.eot" />
+    <Content Include="fonts\themify\themify.ttf" />
+    <Content Include="fonts\themify\themify.woff" />
+    <EntityDeploy Include="Models\db_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>db_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\db_Model.edmx.diagram">
+      <DependentUpon>db_Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\dashboard\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\dashboard\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\dashboard\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\dashboard\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\LogIn.cshtml" />
+    <Content Include="Views\User\SignUp.cshtml" />
+    <Content Include="Views\Dashboard\Add.cshtml" />
+    <Content Include="Views\Dashboard\Profile.cshtml" />
+    <Content Include="Views\Home\Venue.cshtml" />
+    <Content Include="Views\Home\Cater.cshtml" />
+    <Content Include="Views\Dashboard\VenueDate.cshtml" />
+    <Content Include="Views\Dashboard\AddCater.cshtml" />
+    <Content Include="Views\Home\VenuBooking.cshtml" />
+    <Content Include="Views\Dashboard\AddMenu.cshtml" />
+    <Content Include="Views\Dashboard\MenuForm.cshtml" />
+    <Content Include="Views\Shared\_LayoutDashboard.cshtml" />
+    <Content Include="Views\VenueManage\book.cshtml" />
+    <Content Include="Views\VenueManage\VenueOrder.cshtml" />
+    <Content Include="Views\Dashboard\VenueList.cshtml" />
+    <Content Include="Views\Dashboard\VenueEdit.cshtml" />
+    <Content Include="Views\Home\VenueSearch.cshtml" />
+    <Content Include="Views\Dashboard\CaterList.cshtml" />
+    <Content Include="Views\Dashboard\CaterEdit.cshtml" />
+    <Content Include="Views\Dashboard\VenueListAdmin.cshtml" />
+    <Content Include="Views\Dashboard\BookingList.cshtml" />
+    <Content Include="Views\CaterManage\menu.cshtml" />
+    <Content Include="Views\CaterManage\menuOrder.cshtml" />
+    <Content Include="Views\Dashboard\CaterBookingList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2321</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2321/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

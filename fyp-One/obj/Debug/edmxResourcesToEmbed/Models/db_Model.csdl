@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_fypModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="db_fypEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Caters" EntityType="db_fypModel.Cater" />
+    <EntitySet Name="CaterAddres" EntityType="db_fypModel.CaterAddre" />
+    <EntitySet Name="Menus" EntityType="db_fypModel.Menu" />
+    <EntitySet Name="MenuItems" EntityType="db_fypModel.MenuItem" />
+    <EntitySet Name="Photos" EntityType="db_fypModel.Photo" />
+    <EntitySet Name="Tables" EntityType="db_fypModel.Table" />
+    <EntitySet Name="Users" EntityType="db_fypModel.User" />
+    <EntitySet Name="venue_rate" EntityType="db_fypModel.venue_rate" />
+    <EntitySet Name="VenueAddresses" EntityType="db_fypModel.VenueAddress" />
+    <EntitySet Name="VenueDates" EntityType="db_fypModel.VenueDate" />
+    <EntitySet Name="VenueFeatures" EntityType="db_fypModel.VenueFeature" />
+    <EntitySet Name="VenueInfoes" EntityType="db_fypModel.VenueInfo" />
+    <EntitySet Name="VenueOrders" EntityType="db_fypModel.VenueOrder" />
+    <AssociationSet Name="FK_Cater_ToTable" Association="db_fypModel.FK_Cater_ToTable">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Cater" EntitySet="Caters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaterAddres_ToTable" Association="db_fypModel.FK_CaterAddres_ToTable">
+      <End Role="Cater" EntitySet="Caters" />
+      <End Role="CaterAddre" EntitySet="CaterAddres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_ToTable" Association="db_fypModel.FK_Menu_ToTable">
+      <End Role="Cater" EntitySet="Caters" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuItems_ToTable" Association="db_fypModel.FK_MenuItems_ToTable">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="MenuItem" EntitySet="MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Photo_ToTable" Association="db_fypModel.FK_Photo_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+      <End Role="Photo" EntitySet="Photos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venue_Rating_ToTable_User" Association="db_fypModel.FK_venue_Rating_ToTable_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="venue_rate" EntitySet="venue_rate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueInfo_ToTable" Association="db_fypModel.FK_VenueInfo_ToTable">
+      <End Role="User" EntitySet="Users" />
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venue_Rating_ToTable_venue" Association="db_fypModel.FK_venue_Rating_ToTable_venue">
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+      <End Role="venue_rate" EntitySet="venue_rate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueAddress_ToTable" Association="db_fypModel.FK_VenueAddress_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+      <End Role="VenueAddress" EntitySet="VenueAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueDate_ToTable" Association="db_fypModel.FK_VenueDate_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+      <End Role="VenueDate" EntitySet="VenueDates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_ToTable" Association="db_fypModel.FK_Table_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+      <End Role="VenueFeature" EntitySet="VenueFeatures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenueOrder_ToTable" Association="db_fypModel.FK_VenueOrder_ToTable">
+      <End Role="VenueInfo" EntitySet="VenueInfoes" />
+      <End Role="VenueOrder" EntitySet="VenueOrders" />
+    </AssociationSet>
+    <EntitySet Name="CaterOrders" EntityType="db_fypModel.CaterOrder" />
+    <AssociationSet Name="FK_CaterOrder_ToTable" Association="db_fypModel.FK_CaterOrder_ToTable">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="CaterOrder" EntitySet="CaterOrders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cater">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaterServiceName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Verify" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="db_fypModel.FK_Cater_ToTable" FromRole="Cater" ToRole="User" />
+    <NavigationProperty Name="CaterAddres" Relationship="db_fypModel.FK_CaterAddres_ToTable" FromRole="Cater" ToRole="CaterAddre" />
+    <NavigationProperty Name="Menus" Relationship="db_fypModel.FK_Menu_ToTable" FromRole="Cater" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="CaterAddre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cStreetAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cCity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cCountry" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cZipCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cContactNumber" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="cContactNumber2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Cater_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cater" Relationship="db_fypModel.FK_CaterAddres_ToTable" FromRole="CaterAddre" ToRole="Cater" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mtype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mprice" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Cater_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cater" Relationship="db_fypModel.FK_Menu_ToTable" FromRole="Menu" ToRole="Cater" />
+    <NavigationProperty Name="MenuItems" Relationship="db_fypModel.FK_MenuItems_ToTable" FromRole="Menu" ToRole="MenuItem" />
+    <NavigationProperty Name="CaterOrders" Relationship="db_fypModel.FK_CaterOrder_ToTable" FromRole="Menu" ToRole="CaterOrder" />
+  </EntityType>
+  <EntityType Name="MenuItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="db_fypModel.FK_MenuItems_ToTable" FromRole="MenuItem" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="venueInfo_id" Type="Int32" Nullable="false" />
+    <Property Name="vPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="VenueInfo" Relationship="db_fypModel.FK_Photo_ToTable" FromRole="Photo" ToRole="VenueInfo" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="venueInfo_id" Type="Int32" Nullable="false" />
+    <Property Name="photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="user_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Caters" Relationship="db_fypModel.FK_Cater_ToTable" FromRole="User" ToRole="Cater" />
+    <NavigationProperty Name="venue_rate" Relationship="db_fypModel.FK_venue_Rating_ToTable_User" FromRole="User" ToRole="venue_rate" />
+    <NavigationProperty Name="VenueInfoes" Relationship="db_fypModel.FK_VenueInfo_ToTable" FromRole="User" ToRole="VenueInfo" />
+  </EntityType>
+  <EntityType Name="venue_rate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="venue_Id" Type="Int32" Nullable="false" />
+    <Property Name="user_Id" Type="Int32" Nullable="false" />
+    <Property Name="rate" Type="Decimal" Precision="2" Scale="1" />
+    <NavigationProperty Name="User" Relationship="db_fypModel.FK_venue_Rating_ToTable_User" FromRole="venue_rate" ToRole="User" />
+    <NavigationProperty Name="VenueInfo" Relationship="db_fypModel.FK_venue_Rating_ToTable_venue" FromRole="venue_rate" ToRole="VenueInfo" />
+  </EntityType>
+  <EntityType Name="VenueAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vContactName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vStreetAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vCity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vCountry" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vZipcode" Type="Int32" Nullable="false" />
+    <Property Name="vContactnum1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="vContactnum2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="vlang" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="vlong" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="venueInfo_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="VenueInfo" Relationship="db_fypModel.FK_VenueAddress_ToTable" FromRole="VenueAddress" ToRole="VenueInfo" />
+  </EntityType>
+  <EntityType Name="VenueDate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VenueDate1" Type="DateTime" Precision="0" />
+    <Property Name="Venue_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="VenueInfo" Relationship="db_fypModel.FK_VenueDate_ToTable" FromRole="VenueDate" ToRole="VenueInfo" />
+  </EntityType>
+  <EntityType Name="VenueFeature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="venuefeatures" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Id_venueInfo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="VenueInfo" Relationship="db_fypModel.FK_Table_ToTable" FromRole="VenueFeature" ToRole="VenueInfo" />
+  </EntityType>
+  <EntityType Name="VenueInfo">
+    <Key>
+      <PropertyRef Name="venueInfo_Id" />
+    </Key>
+    <Property Name="venueInfo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="venueName" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="venueType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="Int32" Nullable="false" />
+    <Property Name="venueWebsite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="venuePrice" Type="Int32" Nullable="false" />
+    <Property Name="venueDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="verify" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Photos" Relationship="db_fypModel.FK_Photo_ToTable" FromRole="VenueInfo" ToRole="Photo" />
+    <NavigationProperty Name="User" Relationship="db_fypModel.FK_VenueInfo_ToTable" FromRole="VenueInfo" ToRole="User" />
+    <NavigationProperty Name="venue_rate" Relationship="db_fypModel.FK_venue_Rating_ToTable_venue" FromRole="VenueInfo" ToRole="venue_rate" />
+    <NavigationProperty Name="VenueAddresses" Relationship="db_fypModel.FK_VenueAddress_ToTable" FromRole="VenueInfo" ToRole="VenueAddress" />
+    <NavigationProperty Name="VenueDates" Relationship="db_fypModel.FK_VenueDate_ToTable" FromRole="VenueInfo" ToRole="VenueDate" />
+    <NavigationProperty Name="VenueFeatures" Relationship="db_fypModel.FK_Table_ToTable" FromRole="VenueInfo" ToRole="VenueFeature" />
+    <NavigationProperty Name="VenueOrders" Relationship="db_fypModel.FK_VenueOrder_ToTable" FromRole="VenueInfo" ToRole="VenueOrder" />
+  </EntityType>
+  <EntityType Name="VenueOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EventDate" Type="DateTime" Precision="0" Nullable="false" />
+    <Property Name="Guests" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Venue_Id" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="VenueInfo" Relationship="db_fypModel.FK_VenueOrder_ToTable" FromRole="VenueOrder" ToRole="VenueInfo" />
+  </EntityType>
+  <Association Name="FK_Cater_ToTable">
+    <End Type="db_fypModel.User" Role="User" Multiplicity="1" />
+    <End Type="db_fypModel.Cater" Role="Cater" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Cater">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaterAddres_ToTable">
+    <End Type="db_fypModel.Cater" Role="Cater" Multiplicity="1" />
+    <End Type="db_fypModel.CaterAddre" Role="CaterAddre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cater">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CaterAddre">
+        <PropertyRef Name="Cater_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_ToTable">
+    <End Type="db_fypModel.Cater" Role="Cater" Multiplicity="1" />
+    <End Type="db_fypModel.Menu" Role="Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cater">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="Cater_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuItems_ToTable">
+    <End Type="db_fypModel.Menu" Role="Menu" Multiplicity="1" />
+    <End Type="db_fypModel.MenuItem" Role="MenuItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuItem">
+        <PropertyRef Name="Menu_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Photo_ToTable">
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="1" />
+    <End Type="db_fypModel.Photo" Role="Photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="Photo">
+        <PropertyRef Name="venueInfo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venue_Rating_ToTable_User">
+    <End Type="db_fypModel.User" Role="User" Multiplicity="1" />
+    <End Type="db_fypModel.venue_rate" Role="venue_rate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="venue_rate">
+        <PropertyRef Name="user_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueInfo_ToTable">
+    <End Type="db_fypModel.User" Role="User" Multiplicity="1" />
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="VenueInfo">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venue_Rating_ToTable_venue">
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="db_fypModel.venue_rate" Role="venue_rate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="venue_rate">
+        <PropertyRef Name="venue_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueAddress_ToTable">
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="1" />
+    <End Type="db_fypModel.VenueAddress" Role="VenueAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueAddress">
+        <PropertyRef Name="venueInfo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueDate_ToTable">
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="1" />
+    <End Type="db_fypModel.VenueDate" Role="VenueDate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueDate">
+        <PropertyRef Name="Venue_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_ToTable">
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="1" />
+    <End Type="db_fypModel.VenueFeature" Role="VenueFeature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueFeature">
+        <PropertyRef Name="Id_venueInfo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenueOrder_ToTable">
+    <End Type="db_fypModel.VenueInfo" Role="VenueInfo" Multiplicity="1" />
+    <End Type="db_fypModel.VenueOrder" Role="VenueOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VenueInfo">
+        <PropertyRef Name="venueInfo_Id" />
+      </Principal>
+      <Dependent Role="VenueOrder">
+        <PropertyRef Name="Venue_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CaterOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EventDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Guests" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="db_fypModel.FK_CaterOrder_ToTable" FromRole="CaterOrder" ToRole="Menu" />
+  </EntityType>
+  <Association Name="FK_CaterOrder_ToTable">
+    <End Type="db_fypModel.Menu" Role="Menu" Multiplicity="1" />
+    <End Type="db_fypModel.CaterOrder" Role="CaterOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CaterOrder">
+        <PropertyRef Name="Menu_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Planatizer</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+</head>
+<body>
+    <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+            <!--Header--> 
+            <div id="fh5co-header" style="height: 75px;">
+                <header id="fh5co-header-section" style="height: 75px;">
+                    <div class="container">
+                        <div class="nav-header">
+                            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                            <h1 id="fh5co-logo"><a href="\"><img src="~/Content/images/p-logo-w.png" width="150"/> </a></h1>
+                            <nav id="fh5co-menu-wrap" role="navigation">
+                                <ul class="sf-menu" id="fh5co-primary-menu">
+                                    <li class="active"><a  href="\">Home</a></li>
+                                    @*<li>
+                                        <a href="hotel.html" class="fh5co-sub-ddown">Venue</a>
+                                        <ul class="fh5co-sub-menu">
+                                            <li><a href="#">Luxe Hotel</a></li>
+                                            <li><a href="#">Deluxe Hotel</a></li>
+                                            <li>
+                                                <a href="#" class="fh5co-sub-ddown">King Hotel</a>
+                                                <ul class="fh5co-sub-menu">
+                                                    <li><a href="#" target="_blank">Build</a></li>
+                                                    <li><a href="#" target="_blank">Work</a></li>
+                                                    <li><a href="#" target="_blank">Light</a></li>
+                                                    <li><a href="#" target="_blank">Relic</a></li>
+                                                    <li><a href="#" target="_blank">Display</a></li>
+                                                    <li><a href="#" target="_blank">Sprint</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Five Star Hotel</a></li>
+                                        </ul>
+                                    </li>*@
+                                    <li><a href="\home\VenueSearch">Venue List</a></li>
+                                  
+                                    <li>
+                                        <a  class="fh5co-sub-ddown">Services</a>
+                                        <ul class="fh5co-sub-menu">
+                                            <li><a href="\home\cater">CATERING</a></li>
+                                            @*<li><a href="#">Deluxe Hotel</a></li>*@
+                                            
+                                        </ul>
+                                    </li>
+                                    @*<li><a href="#">My Booking</a></li>*@
+                                    <li><a href="/home/contact">Contact</a></li>
+                                    @{
+                                        if (Session["User"] != null)
+                                        {
+
+                                            <li>
+                                                <a href="#" class="fh5co-sub-ddown">My Account</a>
+                                                <ul class="fh5co-sub-menu">
+                                                    <li class=""><a href="/dashboard/Profile"><span>DashBoard</span></a></li><hr />
+                                                    <li class="" style="text-align:right;"><a href="/User/LogOut"><span>Sign Out</span></a></li>
+                                                   <!--      <li class="btn-log"><a href="/User/LogOut"><span>Sign Out</span></a></li>       -->
+                                                </ul>
+                                            </li>
+
+                                                    
+                                                    }
+                                                    else
+                                                    {
+                                                    <li class="btn-log" style="height: 75px;"><a href="/User" style="margin-top:-0.7em;"><span>Sign In</span></a></li>
+                                                    }
+                                                    }
+                                                </ul>
+</nav>
+                        </div>
+                    </div>
+                </header>
+
+            </div>
+            <!-- end:fh5co-header -->
+            
+                @RenderBody()
+             
+                <!--Footer-->
+                <footer id="footer" class="fh5co-bg-color">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="copyright">
+                                    <p>
+                                        <small>
+                                            &copy; 2017 Event Planatizer. <br> All Rights Reserved. <br>
+                                            Designed by <a href="#" target="_blank">Planatizer.com</a> 
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h3>Company</h3>
+                                        <ul class="link">
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="/home/venue">Venues</a></li>
+                                            <li><a href="#">Customer Care</a></li>
+                                            <li><a href="/home/contact">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3>Our Facilities</h3>
+                                        <ul class="link">
+                                            <li><a href="#">Venues</a></li>
+                                            <li><a href="#">Cater</a></li>
+                                            <li><a href="#">Pick-up</a></li>
+                                            <li><a href="#">Photography</a></li>
+                                            <li><a href="#">DJ</a></li>
+                                            <li><a href="#">Wedding Car</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Subscribe</h3>
+                                        <p>Sed cursus ut nibh in semper. Mauris varius et magna in fermentum. </p>
+                                        <form action="#" id="form-subscribe">
+                                            <div class="form-field">
+                                                <input type="email" placeholder="Email Address" id="email">
+                                                <input type="submit" id="submit" value="Send">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <ul class="social-icons">
+                                    <li>
+                                        <a href="#"><i class="icon-twitter-with-circle"></i></a>
+                                        <a href="#"><i class="icon-facebook-with-circle"></i></a>
+                                        <a href="#"><i class="icon-instagram-with-circle"></i></a>
+                                        <a href="#"><i class="icon-linkedin-with-circle"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--End of Footer-->
+            
+        </div>
+        <!-- END fh5co-page -->
+
+    </div>
+    <!-- END fh5co-wrapper -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+@section Scripts{
+    <script>
+        $('#menu > ul.nav li a').click(function (e) {
+            var $this = $(this);
+            $this.parent().siblings().removeClass('active').end().addClass('active');
+            e.preventDefault();
+
+            // Load the page content in to element
+            // with id #content using ajax (There are other ways)
+            $('#content').load($this.href());
+        });
+
+
+
+    </script>
+    <script>
+        $(".sf-menu a").on("click", function () {
+            $(".sf-menu").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    </script>
+    }

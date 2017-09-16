@@ -1,0 +1,46 @@
+﻿@model fyp_One.Models.UserSignUpVM
+
+@using (Html.BeginForm("SignUp", "User", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="top-row">
+        <div class="field-wrap">
+            <label>
+                First Name<span class="req">*</span>
+            </label>
+            @Html.EditorFor(model => model.FirstName)
+        </div>
+
+        <div class="field-wrap">
+            <label>
+                Last Name<span class="req">*</span>
+            </label>
+            @Html.EditorFor(model => model.LastName)
+        </div>
+    </div>
+
+    <div class="field-wrap">
+        <label>
+            Email Address<span class="req">*</span>
+        </label>
+        @Html.EditorFor(model => model.SignUpEmail)
+    </div>
+
+
+    <div class="field-wrap">
+        <label>
+            Set A Password<span class="req">*</span>
+        </label>
+        @Html.EditorFor(model => model.SignUpPassword)
+    </div>
+
+    <div class="field-wrap">
+        <label>
+            Set A Password<span class="req">*</span>
+        </label>
+        @Html.EditorFor(model => model.SignUpConfirmPassword)
+    </div>
+
+    <input type="submit" class="button button-block" value="Sign up">
+}

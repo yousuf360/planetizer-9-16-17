@@ -1,0 +1,569 @@
+﻿@model fyp_One.Models.DashBoardViewModel
+
+@{
+    ViewBag.Title = "Add Venue";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<link href="~/Content/dashboard/style.css" rel="stylesheet" />
+
+<div class="">
+    <div class="row" >
+        <div class="col-md-12 " style="background-color:#DCDCDC;">
+            &nbsp;<br />
+            <div class="col-xs-3"  style="height:100%">
+                <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left" style="height:100%">
+                    <li class="active"><a href="#home" data-toggle="tab">Basic Information</a></li>
+                    <li ><a href="#address" data-toggle="tab">Venue Address</a></li>
+                    <li><a href="#feature" data-toggle="tab">Venue Detail</a></li>
+                    <li><a href="#photo-tab" data-toggle="tab">Add Photo</a></li>
+                    @*<li><a href="#preview-tab" data-toggle="tab">Preview</a></li>*@
+                </ul>
+            </div>
+           @using (Html.BeginForm("Add", "Dashboard",
+      FormMethod.Post, new { @id = "frm" , encType = "multipart/form-data" }))
+           {
+
+            @Html.AntiForgeryToken()
+                <div class="col-xs-8 ">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home">
+                            <div class="col-md-8">
+                                <h2><strong>Welcome </strong></h2>
+                                <p>
+                                    Here's the first step to listing your Venue,
+                                    to get started provide some basic information, such as what kind of venue you provide and its capacity.
+                                    You can edit or update this section after the registration process, if needed.
+                                </p>
+                            </div>
+
+
+                            <div class="col-md-8 container">
+                                <!--tab-page size-->
+                                <div id="info-frm">
+                                    <div class="form-div">
+
+                                        <div class="form-group">
+                                            <h3><strong>Basic Information</strong></h3><p>&nbsp;</p>
+                                            <label for="tab1">Venue Name</label><br />
+                                            @Html.EditorFor(model => model.venueName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.venueName, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Venue Type</label><br />
+                                            @Html.DropDownListFor(model => model.venueType, new SelectListItem[]{
+                                                new SelectListItem() {Text = "Banquet Hall", Value="Banquet Hall"},
+                                                new SelectListItem() {Text = "Open Lawn", Value="Open Lawn"},
+                                                new SelectListItem() {Text = "Covered Lawn", Value="Covered Lawn"},
+                                                new SelectListItem() {Text = "Other", Value="Other"}}, "-- Select Venue Type --",  new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.venueType, "", new { @class = "text-danger" })
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label>Capacity</label><br />
+                                            @Html.EditorFor(model => model.capacity, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.capacity, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <br />
+                                            <label>Venue Website (Optional)</label><br />
+                                            @Html.EditorFor(model => model.venueWebsite, new { htmlAttributes = new { @class = "form-control" } })
+                                            @* @Html.ValidationMessageFor(model => model.venueName, "", new { @class = "text-danger" })*@
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div style="margin-top:6px">
+                                            <button href="#address" data-toggle="tab" class="btn btn-primary" style="width:100%" id="btn-info">Continue</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-sm-3" style="background-color:#CCFFFF; line-height:100%; border-radius:4px">
+                                <p style="margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px;">
+                                    <small>
+                                        You're in control! We just need basics to get you started.
+                                        Once you're signed up, you'll ba able to make changes.
+                                    </small>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane" id="address">
+                            @*--------Venue-Address Tab Start---------*@
+                            <div class="col-md-8">
+                                <h2><strong>Your address matters</strong></h2>
+                                <p>
+                                    Please make sure you enter your full address, including building name, number, etc.
+                                    Based on information youe provide, people will visit you.
+                                </p>
+                            </div>
+                            <div class="col-md-8 container">
+                                <div class="form" id="addr-form">
+                                    <div class="form-div">
+
+
+                                        <h3><strong>Venue Address</strong></h3>
+                                        <div class="form-group">
+                                            <label>Contact Name</label><br />
+                                            @Html.EditorFor(model => model.vContactName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.vContactName, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Street Address</label><br />
+                                            @Html.EditorFor(model => model.vStreetAddress, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.vStreetAddress, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            <label>City</label><br />
+                                            @Html.EditorFor(model => model.vCity, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.vCity, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label>Country</label><br />
+                                            @Html.EditorFor(model => model.vCountry, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.vCountry, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Zip Code</label><br />
+                                            @Html.EditorFor(model => model.vZipCode, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.vZipCode, "", new { @class = "text-danger" })
+                                        </div>
+
+
+                                        <div class="form-group">
+                                           
+                                                <label>Contact Number</label><br />
+                                                @Html.EditorFor(model => model.vContactNumber1, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.vContactNumber1, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Alternative number<i> (Optional)</i></label><br />
+                                                @Html.EditorFor(model => model.vContactNumber2, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.vContactNumber2, "", new { @class = "text-danger" })
+                                            </div>
+
+                                       
+
+                                        @*<div class="form-group">
+                                            <div>
+
+                                                <h3><br /><strong>Map</strong></h3>
+                                                <div>
+                                                    ...
+                                                </div>
+
+                                            </div>
+                                        </div>*@
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <div style="margin-top:6px">
+                                            <button id="btn-addr" href="#feature" data-toggle="tab" class="btn btn-primary" style="width:100%">Continue</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> @* ---------   End Address Tab -------*@
+
+                        <div class="tab-pane" id="feature">
+                            @* ---------   START Feature Tab -------*@
+                            <div class="col-md-8">
+                                <h2><strong>Venue details</strong></h2>
+                                <p>
+                                    Tell us a bit more about you're property.
+                                    People like to know as much as possible about the venue before they book,
+                                    so the more detail the batter.
+                                </p>
+                            </div>
+                            <div class="col-md-8 container">
+                                <div id="feature-form" class="form">
+                                    <div class="form-div">
+                                        <div class="form-group">
+                                            <div>
+                                                <label>Feature</label>
+
+                                                <input list="" class="form-control" id="Feature-textbox" type="text">
+                                                @Html.HiddenFor(model => model.venueFeature)
+                                                <div class="info">
+                                                    <h4><small> &nbsp;&nbsp; List down all features, like: free parking, Outdoor Seating, Waiter Service, etc.</small></h4>
+                                                </div>
+                                            </div>
+
+                                            @Html.ValidationMessageFor(model => model.venueFeature, "", new { @class = "text-danger" })
+                                            <span id="msg1" class="text-danger"></span>
+                                            <br />
+                                            <div class="Features">
+                                                Features List:
+                                            </div>
+                                            <br />
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label>Base Price per event</label>
+                                            @Html.EditorFor(model => model.venuePrice, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.venuePrice, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <div style="margin-top:6px">
+                                            <button id="btn-feature" href="#photo-tab" data-toggle="tab" class="btn btn-primary" style="width:100%">Continue</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>  @* ---------   End Feature Tab -------*@
+
+                        <div class="tab-pane" id="photo-tab">     @* ---------   START Photo Tab -------*@
+
+                            <div class="col-md-8">
+                                <h2><strong>Venue Photos</strong></h2>
+                                <p>
+                                    Great photos in white people to get the full experience of your venue.
+                                    Make sure you include high-resolution photos of your venue.
+                                    We'll display these photos on your Venue's page on our website.
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form" id="photo-form">
+                                    <div class="form-div col-lg-12">
+                                        <div>
+                                            <h4><strong>Photo gallery</strong></h4>
+
+                                            <div class="col-md-5" style="border:dashed; border-width:2px; border-radius:5px; border-color:silver; text-align:center; ">
+                                                <div style="padding:25px;">
+
+                                                    <h4>
+                                                        <strong>No venue photos yet</strong><br /><small>Upload atleast one</small>
+                                                    </h4>
+                                                    <input type="file" name="venuePhoto" />
+                                                    <input type="file" name="venuePhoto" />
+                                                    <input type="file" name="venuePhoto" />
+                                                    <input type="file" name="venuePhoto" />
+                                                    <input type="file" name="venuePhoto" />
+                                                    @*<button class="btn btn-primary"><strong>Add Photo</strong></button>*@
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+
+                                                <div style="padding:10px;">
+                                                    <h4>
+                                                        <strong>No professsional photos? No problem</strong>
+                                                    </h4>
+                                                    <p>
+                                                       <small> 
+                                                            <span class="glyphicon glyphicon-menu-right"></span>Adjust your camers to highest resulation possible.<br />
+                                                            <span class="glyphicon glyphicon-menu-right"></span>Use horizontal layout, have fun taking photos of your venue.<br />
+                                                            <span class="glyphicon glyphicon-menu-right"></span>Save you photos as .JPEGs on your computer.<br />
+                                                            <span class="glyphicon glyphicon-menu-right"></span>Upload them here.<br />
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+
+                                    <div style="margin-top:6px">
+                                        <button id="btn-photo" href="#preview-tab" data-toggle="tab" class="btn btn-primary" style="width:100%">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> @* ---------   END Photo Tab -------*@
+
+                        <div class="tab-pane" id="preview-tab">   @* ---------   START preview Tab -------*@
+
+
+                            <div class="col-md-8">
+                                <h2><strong class="head-venue-name">Venue preview</strong></h2>
+                                <p>
+                                    This is overview of all information you've provided.
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form" id="photo-form">
+                                    <div class="form-div col-lg-12">
+                                        <div>
+                                            <h4>
+                                                <strong class="venue-name">Venue Name</strong><br />
+                                                <small id="venue-addr">Venue Address</small>,&nbsp;<small id="venue-city"></small>.&nbsp;<small id="venue-zipcode"></small>
+                                            </h4>
+                                            <div class="col-md-10" style="background-color:#DCDCDC; border-radius:5px; text-align:center; height:300px;">
+                                                <span class="glyphicon glyphicon-camera " style="padding-top:19%;"></span>
+                                            </div>
+                                           
+                                            </div>
+                                        <div class="form-group col-md-8">
+                                            <img />
+                                            <p><small>Here is where discription of your venue will go.</small></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr style="background-color:#FF5722; color:white;">
+                                                        <th><strong>Type</strong></th>
+                                                        <th><strong>Capacity</strong></th>
+                                                        <th><strong>Price per event</strong></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody >
+                                                    <tr>
+                                                        <td id="venue-type"></td>
+                                                        <td id="venue-capacity"></td>
+                                                        <td id="venue-price"></td>
+                                                    </tr>
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="form-group col-md-10" id="feature-list">
+                                            <h5><strong>Feature List</strong></h5>
+                                           
+                                           @* ----------Display list -- div Size('col-sm-4')------------*@
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <div style="margin-top:6px">
+                                            <input  style="width:100%; align-self:center " type="submit" id="Add-Venue" class="btn btn-primary" value="Save" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+                                </div>
+                            </div>
+                        </div>
+                                        <div class="clearfix"></div>
+           } @*-------- post method END ------------*@
+                            </div>
+           
+              </div>
+    </div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        
+        $("#btn-info").on("click", function (e) {
+           if($("#frm").validate().element("#venueName") && 
+            $("#frm").validate().element("#venueType") &&
+            $("#frm").validate().element("#capacity"))
+           {
+           }
+           else {
+
+               e.preventDefault();
+               return false;
+           }
+        });
+
+        $("#btn-addr").on("click", function (e) {
+            if ($("#frm").validate().element("#vContactName") &&
+                $("#frm").validate().element("#vStreetAddress") &&
+                $("#frm").validate().element("#vCity") &&
+                $("#frm").validate().element("#vCountry") &&
+                $("#frm").validate().element("#vZipCode") &&
+                $("#frm").validate().element("#vContactNumber1")) {
+            }
+            else {
+
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $("#btn-feature").on("click", function (e) {
+            if ($('.Features').children().length < 1) {
+                $('#msg1').text("Please add some Features.");
+                e.preventDefault();
+                return false;
+            }
+            if ($("#frm").validate().element("#venuePrice")) {
+
+            }
+            else {
+                e.preventDefault();
+                return false;
+
+            }
+
+        });
+
+        $("#btn-photo").on("click", function (e) {
+            $('.head-venue-name').html($("#venueName").val()+" preview");
+            $('.venue-name').html($("#venueName").val());
+            $('#venue-addr').html($("#vStreetAddress").val());
+            $('#venue-city').html($("#vCity").val());
+            $('#venue-zipcode').html($("#vZipCode").val());
+            $('#venue-type').html($("#venueType").val());
+            $('#venue-capacity').html($("#capacity").val());
+            $('#venue-price').html($("#venuePrice").val());
+            var features = $('#venueFeature').val().split(',');
+            var arrayLength = features.length;
+            for (var i = 0; i < arrayLength; i++) {
+                $('#feature-list').append('<div class="col-sm-4">'+features[i]+'</div>')                //Add feature div
+            }
+            
+            
+        })
+        
+        
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            var someData = $("#venueFeature").val();
+            var feature = someData.slice(0, -1).split(',');
+            console.log(feature);
+            $.each(feature, function (index, value) {
+                if (value.length > 0) {
+                    $('.Features').append('<span class="FeaturesSelected"><span class="FeaturesSelectedVal"  temp="' + value + '" name="Features">' + value + '.</span>&nbsp;&nbsp;<i>X</i></span> ');
+                }
+
+            });
+            $("button").click(function () {
+                $(".tabs-left li").addClass("active").siblings(".tabs-left li").removeClass('active');
+            });
+        });
+        $("#Feature-textbox").keypress(function (event) {
+
+            if (event.which == 13) {
+                if ($("#msg").text() == "Please add some Features.") {
+                    $("#msg").text('');
+                }
+                if ($("span:contains('" + $('#Feature-textbox').val() + "')").length > 0) {
+                    $("#msg1").text($('#Feature-textbox').val() + ' is already in list.');
+                    $('#Feature-textbox').val("");
+                }
+                else {
+                    $("#msg1").text('');
+                    $('#venueFeature').val($('#venueFeature').val() + $('#Feature-textbox').val()+',');
+                    $('.Features').append('<span class="FeaturesSelected"><span class="FeaturesSelectedVal"  temp="' + $('#Feature-textbox').val() + '" name="Features">' + $('#Feature-textbox').val() + '.</span>&nbsp;&nbsp;<i>X</i></span> ');
+                    $('#Feature-textbox').val("");
+                }
+                return false;
+            }
+            else {
+                $("#msg1").text('');
+                return true;
+            }
+        });
+
+
+        $("body").on("click", ".FeaturesSelected", function () {
+            $('#venueFeature').val($('#venueFeature').val().replace($(this).children(':first').attr('temp')+',',''));
+            $("#msg1").text('');
+            this.remove();
+
+        });
+
+     
+        function upload() {
+
+            // Checking whether FormData is available in browser
+            if (window.FormData !== undefined) {
+
+                var fileUpload = $("#imagedata").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+
+
+                $.ajax({
+                    url: '/Dashboard/UploadFiles',
+                    type: "POST",
+                    contentType: false, // Not to set any content header
+                    processData: false, // Not to process data
+                    data: fileData,
+                    success: function (result) {
+                        console.log(result);
+                      FileName(result[0]);
+
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("FormData is not supported.");
+            }
+
+        }
+    </script>
+}
+<style>
+
+body{
+    line-height:none !important;
+}
+.form-div{
+    background-color:#ffffff; 
+    /*border:solid;
+    border-radius:6px; 
+    border-width:2px; 
+    border-color:#FF5722;*/ 
+    padding:20px;
+}
+
+   
+.info {
+    margin-top:3px;
+    background-color: #e7f3fe;
+    border-left: 3px solid #2196F3;
+}
+.FeaturesSelected {
+    padding: 2px 8px;
+    background-color: rgba(231,235,238,7);
+    border: 1px solid lightgray;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 3px;
+}
+    .glyphicon-camera {
+font-size: 60px;
+}
+
+.FeaturesSelected:hover {
+    background-color:lightgray;
+}
+
+.FeaturesSelected i {
+    color: darkred;
+    font-weight: 700;
+    font-style: normal;
+}
+        
+#fh5co-header {
+    background-color: #FF5722;
+}
+</style>

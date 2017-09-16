@@ -1,0 +1,200 @@
+﻿@model fyp_One.Models.CaterOrderViewModel 
+@{
+    ViewBag.Title = "Menu Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+
+    <div class="col-lg-12">
+        <div style="margin-top:100px;">
+            <h2>Booking Detail</h2>
+
+        </div>
+
+        <hr />
+
+        <div class="alert alert-success">
+            <strong><span class="glyphicon glyphicon-triangle-right"></span> No payment needed today.</strong> You'll pay after event.
+        </div>
+
+        @*----------------------    Booking form      -------------------*@
+
+        <div class="col-lg-8 form-cont">
+            <h2>Enter Your Details</h2>
+            <div class="frm">
+                @using (Html.BeginForm("CaterOrder", "CaterManage",
+                                          FormMethod.Post))
+                {
+
+                    @Html.AntiForgeryToken();
+                    @Html.HiddenFor(model => model.Menu_Id)
+                  
+
+                    <div class="form-div">
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="Name">Name:</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">Email:</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="contact">Contact Number:</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(model => model.ContactNo, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="guests">Number of Guests:</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(model => model.Guests, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Guests, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-xs-12 date">
+                                    <div class="input-group input-append date" id="dateRangePicker">
+                                        <input type="text" class="form-control" id="date-input" name="EventDate" />
+
+                                        <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        <div class="col-xs-5 col-xs-offset-3">
+                                            @*<button type="button" id="Validate" class="btn btn-default">Validate</button>*@
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div style="margin-top: 1.2em;">
+                                <input style="width:50%;  " type="submit" id="book-Cater" class="btn btn-primary" value="Submit" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h2><b>What Happens Next?</b></h2>
+            <p>
+                You will recieve a confirmation email.<br />
+
+                Then vendor will contact you directly as soon as possible.
+            </p>
+        </div>
+
+        <div class="col-lg-11" style="text-align:justify;">
+            <h2><b>Privacy Policy:</b></h2>
+            <p>
+                Your privacy is important to us.
+                The information you fill in above is never shared with anyone else other than the venue you are contacting by submitting this form.
+                We will only use this information to contact you regarding your enquiry.
+                By submitting this form your details will not be added to any mailing list.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+            var date = new Date();
+            date.setDate(date.getDate() - 1);
+            $('#dateRangePicker')
+                    .datepicker({
+                        format: 'mm/dd/yyyy',
+                        startDate: 'date',
+                        endDate: '12/30/2020',
+                        todayHighlight: true
+                    }).on("change", function () {
+                        var date = $('#date-input').val();
+
+                        if (date == "") {
+
+                            return;
+                        }
+                        //var venueId = $('#venue-id').val();
+
+                        //$.ajax({
+                        //    url: "/VenueManage/CheckDate",
+                        //    type: 'GET',
+                        //    data: {
+                        //        venueId: venueId,
+                        //        date: date,
+                        //    },
+                        //    success: function (data) {
+                        //        console.log(data);
+                        //        if (data == "free") {
+                        //            $("#date-sub").removeClass('disabled');
+                        //        }
+                        //        else if (data == "occupied") {
+                        //            $("#date-sub").addClass('disabled');
+                        //        }
+
+                        //    }
+                        //});
+                    });
+        });
+
+    </script>
+    
+}
+
+<style>
+    #fh5co-header {
+        background-color: #FF5722;
+    }
+
+    .form-div {
+        background-color: rgba(220,220,220, 0.4);
+        /*border: solid;
+    border-radius: 6px;
+    border-width: 2px;
+    border-color: #FF5722;*/
+        padding: 20px;
+        margin-bottom: 2.1em;
+    }
+
+    .form-cont {
+        display: table;
+        margin: 0 auto;
+    }
+
+    .text-box {
+        width: 100% !important;
+    }
+
+    .row {
+        padding-top: 10px;
+    }
+
+    .text-box {
+        width: inherit;
+    }
+</style>
+

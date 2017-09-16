@@ -1,0 +1,131 @@
+﻿@model fyp_One.Models.UserIndex
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/login/normalize.css" rel="stylesheet" />
+<link href="~/Content/login/reset.css" rel="stylesheet" />
+<link href="~/Content/login/style.css" rel="stylesheet" />
+<div><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+<div class="form">
+
+    <ul class="tab-group">
+       @if (ViewBag.activeTab != "signup")
+           {
+        <li class="tab active"><a href="#login">Log In</a></li>
+        <li class="tab"><a href="#signup">Sign Up</a></li>
+           }
+           else
+           {
+            <li class="tab"><a href="#login">Log In</a></li>
+            <li class="tab active"><a href="#signup">Sign Up</a></li>
+           }
+    </ul>
+
+    <div class="tab-content">
+       @if (ViewBag.activeTab != "signup")
+           {
+            <div id="login">
+                <h1 style="font-size: x-large; font-weight: 600;">
+                    Sign In to Your Account
+                    <hr style="width:20%;" />
+                </h1>
+                
+                
+
+                @Html.Partial("LogIn", Model.logIn)
+
+
+
+
+            </div>
+
+            <div id="signup">
+                <h1 style="font-size: x-large; font-weight: 600;">
+                    Sign Up for Free
+                    <hr style="width:20%;" />
+                </h1>
+
+                @Html.Partial("SignUp", Model.signUp)
+
+            </div>
+           }
+           else
+           {
+             <div id="signup">
+                <h1>Sign Up for Free</h1>
+
+                @Html.Partial("SignUp", Model.signUp)
+
+            </div>
+
+            <div id="login">
+                <h1>Welcome Back!</h1>
+
+                @Html.Partial("LogIn", Model.logIn)
+
+            </div>
+           }
+    </div><!-- tab-content -->
+
+</div> <!-- /form -->
+
+
+@section Scripts{
+@Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+            var $this = $(this),
+                label = $this.prev('label');
+
+            if (e.type === 'keyup') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.addClass('active highlight');
+                }
+            } else if (e.type === 'blur') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.removeClass('highlight');
+                }
+            } else if (e.type === 'focus') {
+
+                if ($this.val() === '') {
+                    label.removeClass('highlight');
+                }
+                else if ($this.val() !== '') {
+                    label.addClass('highlight');
+                }
+            }
+
+        });
+
+        $('.tab a').on('click', function (e) {
+
+            e.preventDefault();
+
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+
+            target = $(this).attr('href');
+
+            $('.tab-content > div').not(target).hide();
+
+            $(target).fadeIn(600);
+
+        });
+
+    </script>
+    }
+<style>
+    #fh5co-wrapper {
+        background-image: url('../../Content/images/signupBg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>

@@ -1,0 +1,182 @@
+﻿@*@model List<fyp_One.Models.VenueInfo>*@
+
+@model fyp_One.Models.VenueDateViewModel
+
+@{
+    ViewBag.Title = "Manage Venue";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+   
+<div class="">
+    @*<div class="col-lg-2">
+
+        <nav class="lnav navbar-fixed-bottom">
+            <ul class="nav navbar-nav lnav top-bar fixed">
+
+                <li style="width:100%;"><a style="color:#ffffff; border-top:solid; border-top-width:1.5px;" href="/Dashboard/Add" target="_blank">List your Venue</a></li>
+                <li style="width:100%;"><a style="color:#ffffff; border-top:solid; border-top-width:1.5px;" href="#">Manage your venue</a></li>
+                <li style="width:100%"><a style="color:#ffffff; border-top:solid; border-top-width:1.5px;" href="#">Catering services</a></li>
+
+
+                <li style="width:100%"><a style="color:#ffffff; border-top:solid; border-top-width:1.5px;" href="#">Edit Cater</a></li>
+                <li style="width:100%"><a style="color:#ffffff; border-top:solid; border-bottom:solid; border-top-width:1.5px; border-bottom-width:1.5px;" href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </div>*@
+    <div class="container" style="margin-top:30px;">
+        <div class="row">
+            <h3><strong>Edit Venue Information</strong></h3>
+
+            <p>Insert Venue Dates</p>
+
+        </div>
+       @**<div style="height:100px;"></div> --------  manage date ------------- *@
+        <div class="row"></div>
+@using (Html.BeginForm("VenueDate", "Dashboard",
+                  FormMethod.Post, new { @id = "frm", encType = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+        <div class="row">
+        
+            <div class="form-group col-lg-5 ">
+                @Html.DropDownList("Venue_Id", null, "Select Venue Name", htmlAttributes: new { @class = "form-control", @placeholder = "Venue Name" })
+         </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class='col-sm-4'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker5'>
+                                 @Html.EditorFor(model => model.VenueDate)
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <div style="margin-top:6px">
+                    <input style="width:20%; align-self:center " type="submit" id="Manage-Venue" class="btn btn-primary" value="Save" />
+                </div>
+            </div>
+            @*<div class="form-group">
+                <div style="margin-top:6px">
+                    <input style="width:20%; align-self:center" type="submit" id="Edit-Venue" class="btn btn-primary" value="Edit Venue" />
+                </div>
+            </div>*@
+
+       
+            </div>
+}
+        </div>
+    </div>
+
+<style>
+    .lnav {
+        margin-top: 98px;
+        background-color: #3c3c3c;
+        color: #ffffff;
+        width: 140px;
+        /*position: fixed;*/
+        border-radius: 0;
+        height: 100%;
+    }
+
+    .navbar-fixed-left .navbar-nav > li {
+        float: none; /* Cancel default li float: left */
+        width: 139px;
+    }
+
+    .navbar-fixed-left + .container {
+        padding-left: 160px;
+    }
+
+    /* On using dropdown menu (To right shift popuped) */
+    .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+        margin-top: -50px;
+        margin-left: 140px;
+    }
+
+    #fh5co-header {
+        background-color: #FF5722;
+    }
+</style>
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(function () {
+            $('#datetimepicker5').datepicker({
+                multidate: true
+            });
+            $('#VenueDate').addClass("form-control");
+        });
+    });
+    </script>
+    <script>
+       $(document).ready(function () {
+
+           var someData = $("#venueFeature").val();
+           var feature = someData.slice(0, -1).split(',');
+           console.log(feature);
+           $.each(feature, function (index, value) {
+               if (value.length > 0) {
+                   $('.Features').append('<span class="FeaturesSelected"><span class="FeaturesSelectedVal"  temp="' + value + '" name="Features">' + value + '.</span>&nbsp;&nbsp;<i>X</i></span> ');
+               }
+
+           });
+           $("button").click(function () {
+               $(".tabs-left li").addClass("active").siblings(".tabs-left li").removeClass('active');
+           });
+       });
+    $("#Feature-textbox").keypress(function (event) {
+
+        if (event.which == 13) {
+            if ($("#msg").text() == "Please add some Features.") {
+                $("#msg").text('');
+            }
+            if ($("span:contains('" + $('#Feature-textbox').val() + "')").length > 0) {
+                $("#msg1").text($('#Feature-textbox').val() + ' is already in list.');
+                $('#Feature-textbox').val("");
+            }
+            else {
+                $("#msg1").text('');
+                $('#venueFeature').val($('#venueFeature').val() + $('#Feature-textbox').val()+',');
+                $('.Features').append('<span class="FeaturesSelected"><span class="FeaturesSelectedVal"  temp="' + $('#Feature-textbox').val() + '" name="Features">' + $('#Feature-textbox').val() + '.</span>&nbsp;&nbsp;<i>X</i></span> ');
+                $('#Feature-textbox').val("");
+            }
+            return false;
+        }
+        else {
+            $("#msg1").text('');
+            return true;
+        }
+    });
+
+
+    $("body").on("click", ".FeaturesSelected", function () {
+        $('#venueFeature').val($('#venueFeature').val().replace($(this).children(':first').attr('temp')+',',''));
+        $("#msg1").text('');
+        this.remove();
+
+    });
+
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#Edit-Venue").click(function () {
+        $("#edit-frm").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>
+
+    }
+
